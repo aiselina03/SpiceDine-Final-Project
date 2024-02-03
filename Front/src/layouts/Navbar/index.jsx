@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [sticky, setSticky] = useState(false)
+
+  function stickyNavbar() {
+    if (window.scrollY >= 500) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  }
+  window.addEventListener("scroll", stickyNavbar);
+
   return (
     <>
-      <div className="navbar">
+      <div className={`navbar ${sticky === true ? "sticky" : ""}`}>
         <div className="header">
           <div className="message">
             <p>
@@ -32,7 +43,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-        <div className="mainNavbar">
+        <div className="mainNavbar" >
           <div className="logo">
             <NavLink to={"/"}>
               <img src="/src/images/logo.png" alt="" />
@@ -63,13 +74,13 @@ function Navbar() {
           </div>
           <div className="icons">
             <i className="fa-light fa-magnifying-glass"></i>
-            <NavLink>
+            <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
             </NavLink>
-            <NavLink>
+            <NavLink >
               <i className="fa-light fa-user"></i>
             </NavLink>
-            <NavLink>
+            <NavLink to={"/basket"}>
               <i className="fa-light fa-cart-shopping"></i>
             </NavLink>
           </div>

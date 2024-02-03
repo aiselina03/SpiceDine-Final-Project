@@ -149,3 +149,12 @@
     }
   }
 }
+.sticky {
+  position: fixed;
+  background-color: #0b1315;
+  min-height: 12vh;
+  border-bottom: 1px solid #cdc5b9;
+  .header {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+.ourMenu {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/src/images/bg_our_menu.jpg");
+  width: 100%;
+  max-width: 100%;
+  min-height: 90vh;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.549);
+  background-attachment: fixed;
+  
+}
