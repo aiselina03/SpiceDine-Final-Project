@@ -1,18 +1,3 @@
-.slick-next {
-  display: none !important;
-}
-
-.slick-prev {
-  display: none !important;
-}
-.slick-dots {
-  bottom: 45px !important;
-  li button:before {
-    color: #cdc5b9 !important;
-    font-size: 10px !important;
-  }
-}
-
 .sliderImage {
   width: 100%;
   min-height: 100vh;
@@ -231,6 +216,20 @@
           transition: all 700ms;
         }
       }
+    }
+  }
+  .slick-next {
+    display: none !important;
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+  .slick-dots {
+    bottom: 55px !important;
+    li button:before {
+      color: #c7a97f !important;
+      font-size: 10px !important;
     }
   }
 }

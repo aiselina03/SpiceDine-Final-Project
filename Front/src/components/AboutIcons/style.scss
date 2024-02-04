@@ -1,17 +1,23 @@
 .aboutIcons {
   width: 100%;
   max-width: 100%;
-  min-height: 50vh;
-
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .iconsContainer {
     width: 90%;
-    margin: 0px auto;
+    margin: 70px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .iconCards {
       display: grid;
       grid-template-columns: auto auto auto auto;
       gap: 70px;
       align-items: center;
       justify-content: center;
+     
       .iconCard {
         text-align: center;
         display: flex;

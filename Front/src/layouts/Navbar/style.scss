@@ -23,12 +23,18 @@
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     padding: 20px 0;
-    .fa-light {
-      margin-right: 7px;
-      transition: all 700ms;
-      cursor: pointer;
-      &:hover {
-        transform: rotateY(180deg);
+    .message {
+      p {
+        &:hover {
+          .fa-light {
+            transform: rotateY(360deg);
+          }
+        }
+        .fa-light {
+          margin-right: 7px;
+          transition: all 700ms;
+          cursor: pointer;
+        }
       }
     }
 
@@ -38,11 +44,31 @@
       gap: 50px;
       justify-content: center;
       .number {
+        &:hover {
+          .fa-light {
+            transform: rotateY(360deg);
+          }
+        }
+        .fa-light {
+          margin-right: 7px;
+          transition: all 700ms;
+          cursor: pointer;
+        }
         a {
           color: #cdc5b9;
         }
       }
       .mail {
+        &:hover {
+          .fa-light {
+            transform: rotateY(360deg);
+          }
+        }
+        .fa-light {
+          margin-right: 7px;
+          transition: all 700ms;
+          cursor: pointer;
+        }
         a {
           color: #cdc5b9;
         }
@@ -89,6 +115,9 @@
               color: #c7a97f;
             }
           }
+          .active{
+            color: #c7a97f;
+          }
         }
         .pages {
           cursor: pointer;
@@ -108,7 +137,7 @@
             margin-top: 20px;
             opacity: 0;
             font-size: 15px;
-            background-color: #0b1315;
+            background-color: #16272D;
             a {
               padding: 15px;
               display: flex;

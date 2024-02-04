@@ -1,0 +1,126 @@
+:root {
+  --main-bg-color: #0b1315;
+  --main-text-color: #c7a97f;
+  --main-some-bg-color: #16272d;
+  --main-p-color: #cdc5b9;
+  --main-book-color: #cdc5b9;
+  --main-menu-bg-color: #0b1315;
+}
+
+.light {
+  --main-bg-color: #fbf8f3;
+  --main-text-color: #0b1315;
+  --main-some-bg-color: #faedda;
+  --main-p-color: #666666;
+  --main-book-color: #0b1315;
+  --main-menu-bg-color: #faedda;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  .homePage {
+    .aboutSection {
+      .about {
+        .story {
+          .info {
+            h2 {
+              color: var(--main-text-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+        }
+        .time {
+          .tallSquare {
+            .square {
+              h2 {
+                color: var(--main-text-color);
+              }
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .aboutIcons {
+      .iconsContainer {
+        .iconCards {
+          .iconCard {
+            .iconImage {
+              background-color: var(--main-some-bg-color);
+            }
+            h2 {
+              color: var(--main-text-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+        }
+      }
+    }
+    .bookingSection {
+      .bookingTable {
+        background-color: var(--main-some-bg-color);
+        .header {
+          h2 {
+            color: var(--main-book-color);
+          }
+          p {
+            color: var(--main-book-color);
+          }
+        }
+        .service {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .form {
+            .row1 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .field {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+            .row2 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .fields {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .feedBack {
+      .comments {
+        background-color: var(--main-some-bg-color);
+        .feed {
+          p {
+            color: var(--main-book-color);
+          }
+        }
+      }
+    }
+    .ourMenu {
+      .containerMenu {
+        .menuView {
+          border: 1px solid #c7a97f;
+          .view {
+            background-color: var(--main-menu-bg-color);
+          }
+        }
+      }
+    }
+  }
+}

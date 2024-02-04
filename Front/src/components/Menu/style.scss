@@ -7,9 +7,107 @@
     url("/src/images/bg_our_menu.jpg");
   width: 100%;
   max-width: 100%;
-  min-height: 90vh;
+  min-height: 85vh;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.549);
   background-attachment: fixed;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .containerMenu {
+    width: 80%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-around;
+    .menuText {
+      width: 600px;
+      height: 600px;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+
+      span {
+        font-style: italic;
+        color: #cdc5b9;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        margin-top: 30px;
+      }
+      h2 {
+        font-size: 38px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 20px 0;
+      }
+      .text {
+        margin: 10px 0;
+        width: 450px;
+        line-height: 27px;
+        color: #cdc5b9;
+        font-size: 17px;
+        font-family: "Roboto", sans-serif;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid #c7a97f;
+        background-color: transparent;
+        font-family: "Roboto", serif;
+        width: 180px;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 25px;
+        position: relative;
+        &:hover {
+          .opacity {
+            width: 180px;
+            height: 50px;
+            background-color: #c7a97f;
+            z-index: 1;
+          }
+          p {
+            color: white;
+            z-index: 2;
+          }
+        }
+
+        p {
+          color: #cdc5b9;
+          transition: all 700ms;
+        }
+
+        .opacity {
+          position: absolute;
+          width: 0px;
+          left: 0;
+          top: 0;
+          height: 50px;
+          transition: all 700ms;
+        }
+      }
+    }
+    .menuView {
+      height: 620px;
+      width: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px solid #c7a97f;
+      .view {
+        width: 600px;
+        height: 570px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #0b1315;
+      }
+    }
+  }
 }

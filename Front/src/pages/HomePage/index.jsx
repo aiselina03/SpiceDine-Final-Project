@@ -6,6 +6,9 @@ import AboutIcons from "../../components/AboutIcons";
 import BookingTable from "../../components/BookingTable";
 import Video from "../../components/Video";
 import Menu from "../../components/Menu";
+import Scroll from "../../components/Scroll";
+import Mode from "../../components/Mode";
+import FeedBack from "../../components/FeedBack";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -30,14 +33,17 @@ function Home() {
         <>
           <div className="homePage">
             <SliderImage />
-            <About />
+            <About /> 
             <AboutIcons />
             <Menu />
-          
-            <BookingTable />   <Video />
+            <BookingTable />
+            <Video />
+            <FeedBack />
           </div>
         </>
       )}
+      <Mode />
+      <Scroll />
     </>
   );
 }

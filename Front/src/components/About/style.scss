@@ -1,17 +1,16 @@
 .aboutSection {
   width: 100%;
   max-width: 100%;
-  min-height: 120vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   .about {
     width: 90%;
-    margin: 0px auto;
+    margin: 80px auto;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 50px;
-
     .story {
       text-align: center;
       display: flex;

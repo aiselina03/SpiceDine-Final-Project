@@ -3,12 +3,13 @@ import "./style.scss";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const [sticky, setSticky] = useState(false)
+  const [sticky, setSticky] = useState(false);
 
   function stickyNavbar() {
     if (window.scrollY >= 500) {
       setSticky(true);
-    } else {
+    } 
+    else {
       setSticky(false);
     }
   }
@@ -43,7 +44,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-        <div className="mainNavbar" >
+        <div className="mainNavbar">
           <div className="logo">
             <NavLink to={"/"}>
               <img src="/src/images/logo.png" alt="" />
@@ -60,8 +61,9 @@ function Navbar() {
               <li className="pages">
                 PAGES <i className="fa-sharp fa-light fa-chevron-down"></i>
                 <div className="menus">
-                  <NavLink to={"./menu"}>MENU</NavLink>
-                  <NavLink to={"./chef"}>CHEF</NavLink>
+                  <NavLink to={"./menu"}>Menu</NavLink>
+                  <NavLink to={"./chef"}>Chef</NavLink>
+                  <NavLink >Appointment</NavLink>
                 </div>
               </li>
               <li>
@@ -77,7 +79,7 @@ function Navbar() {
             <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
             </NavLink>
-            <NavLink >
+            <NavLink>
               <i className="fa-light fa-user"></i>
             </NavLink>
             <NavLink to={"/basket"}>
