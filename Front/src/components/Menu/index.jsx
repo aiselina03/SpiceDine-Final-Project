@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
@@ -15,13 +16,23 @@ function Menu() {
               in familiar classics, our menu offers a diverse selection to cater
               to every palate.
             </p>
-            <div className="btn">
-              <p>VIEW ALL MENU</p>
-              <div className="opacity"></div>
-            </div>
+            <Link to={"/menu"}>
+              <div className="btn">
+                <p>VIEW ALL MENU</p>
+                <div className="opacity"></div>
+              </div>
+            </Link>
           </div>
           <div className="menuView">
-            <div className="view"></div>
+            <div className="view">
+              <div className="category">
+                <button>STARTERS</button>
+                <button>MAIN</button>
+                <button>DESSERT</button>
+                <button>DRINKS</button>
+              </div>
+              <div className="menuList"></div>
+            </div>
           </div>
         </div>
       </div>

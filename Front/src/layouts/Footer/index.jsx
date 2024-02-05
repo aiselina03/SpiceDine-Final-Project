@@ -12,7 +12,7 @@ function Footer() {
               <h2>QUICK LINKS</h2>
               <ul>
                 <li>
-                  <Link>Appointment</Link>
+                  <Link to={"/appointment"}>Appointment</Link>
                 </li>
                 <li>
                   <Link>Prices</Link>

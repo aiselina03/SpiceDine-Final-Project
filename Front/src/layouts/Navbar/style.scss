@@ -115,7 +115,7 @@
               color: #c7a97f;
             }
           }
-          .active{
+          .active {
             color: #c7a97f;
           }
         }
@@ -137,7 +137,7 @@
             margin-top: 20px;
             opacity: 0;
             font-size: 15px;
-            background-color: #16272D;
+            background-color: #16272d;
             a {
               padding: 15px;
               display: flex;
@@ -163,7 +163,7 @@
         font-size: 19px;
         &:hover {
           color: #c7a97f;
-          transform: rotateY(180deg);
+          transform: rotateY(360deg);
         }
       }
       a {
@@ -172,12 +172,13 @@
         font-size: 19px;
         &:hover {
           color: #c7a97f;
-          transform: rotateY(180deg);
+          transform: rotateY(360deg);
         }
       }
     }
   }
 }
+
 .sticky {
   position: fixed;
   background-color: #0b1315;
@@ -186,4 +187,10 @@
   .header {
     display: none;
   }
+}
+
+.navbar.navbarBcgColor {
+  background-color: #0b1315;
+  position: static;
+  border-bottom: 1px solid #cdc5b9;
 }

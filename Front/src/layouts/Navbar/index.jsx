@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./style.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 
 function Navbar() {
+  const { id } = useParams();
+  let location = useLocation();
   const [sticky, setSticky] = useState(false);
 
   function stickyNavbar() {
     if (window.scrollY >= 500) {
       setSticky(true);
-    } 
-    else {
+    } else {
       setSticky(false);
     }
   }
@@ -17,7 +18,20 @@ function Navbar() {
 
   return (
     <>
-      <div className={`navbar ${sticky === true ? "sticky" : ""}`}>
+      <div
+        className={`navbar ${sticky === true ? "sticky" : "" || 
+          location.pathname === "/about" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/contact" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/menu" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/shop" ? "navbarBcgColor"  : "" ||
+          location.pathname === `/shopDetail/${id}` ? "navbarBcgColor"  : "" ||
+          location.pathname === "/basket" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/wishlist" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/chef" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/appointment" ? "navbarBcgColor"  : "" ||
+          location.pathname === "/*" ? "navbarBcgColor"  : "" 
+        }`}  
+      >
         <div className="header">
           <div className="message">
             <p>
@@ -61,9 +75,10 @@ function Navbar() {
               <li className="pages">
                 PAGES <i className="fa-sharp fa-light fa-chevron-down"></i>
                 <div className="menus">
-                  <NavLink to={"./menu"}>Menu</NavLink>
-                  <NavLink to={"./chef"}>Chef</NavLink>
-                  <NavLink >Appointment</NavLink>
+                  <NavLink to={"/menu"}>Menu</NavLink>
+                  <NavLink to={"/chef"}>Chef</NavLink>
+                  <NavLink to={"/appointment"}>Appointment</NavLink>
+                  <NavLink to={"*"}>Page 404</NavLink>
                 </div>
               </li>
               <li>

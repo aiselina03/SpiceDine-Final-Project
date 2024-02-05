@@ -9,6 +9,8 @@ import Menu from "../../components/Menu";
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import FeedBack from "../../components/FeedBack";
+import HomeChef from "../../components/HomeChef";
+import Cursor from "../../components/Cursor";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -17,7 +19,7 @@ function Home() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1800);
+    }, 2300);
   }, []);
 
   return (
@@ -38,12 +40,14 @@ function Home() {
             <Menu />
             <BookingTable />
             <Video />
+            <HomeChef/>
             <FeedBack />
           </div>
         </>
       )}
       <Mode />
       <Scroll />
+      <Cursor/>
     </>
   );
 }

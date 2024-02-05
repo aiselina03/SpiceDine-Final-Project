@@ -5,6 +5,7 @@
   --main-p-color: #cdc5b9;
   --main-book-color: #cdc5b9;
   --main-menu-bg-color: #0b1315;
+  --main-category-border-color: #393a34;
 }
 
 .light {
@@ -14,6 +15,7 @@
   --main-p-color: #666666;
   --main-book-color: #0b1315;
   --main-menu-bg-color: #faedda;
+  --main-category-border-color: #c7a97f;
 }
 
 body {
@@ -67,10 +69,10 @@ body {
         background-color: var(--main-some-bg-color);
         .header {
           h2 {
-            color: var(--main-book-color);
+            color: var(--main-text-color);
           }
           p {
-            color: var(--main-book-color);
+            color: var(--main-p-color);
           }
         }
         .service {
@@ -115,12 +117,87 @@ body {
     .ourMenu {
       .containerMenu {
         .menuView {
-          border: 1px solid #c7a97f;
           .view {
             background-color: var(--main-menu-bg-color);
+            .category {
+              border-bottom: 1px solid var(--main-category-border-color);
+              button {
+                color: var(--main-book-color);
+              }
+            }
           }
         }
       }
+    }
+    .homeChef {
+      .chefContainer {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .chefs {
+          .chef {
+            p {
+              color: var(--main-p-color);
+            }
+            h2 {
+              color: var(--main-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .appointment {
+    .bookingTable {
+      background-color: var(--main-some-bg-color);
+      .header {
+        h2 {
+          color: var(--main-text-color);
+        }
+        p {
+          color: var(--main-p-color);
+        }
+      }
+      .service {
+        h2 {
+          color: var(--main-book-color);
+        }
+        .form {
+          .row1 {
+            .input {
+              .label {
+                color: var(--main-book-color);
+              }
+              .field {
+                color: var(--main-book-color);
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .label {
+                color: var(--main-book-color);
+              }
+              .fields {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .errorPage {
+    h2 {
+      color: var(--main-book-color);
+    }
+    p {
+      color: var(--main-p-color);;
     }
   }
 }
