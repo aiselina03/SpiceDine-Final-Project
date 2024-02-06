@@ -8,9 +8,10 @@ import Shop from "./pages/Shop";
 import ShopDetail from "./pages/ShopDetail";
 import Basket from "./pages/Basket";
 import Wishlist from "./pages/Wishlist";
-import Chef from "./pages/Chef";
 import Appointments from "./pages/Appointment";
 import ErrorPage from "./pages/ErrorPage";
+import LoginRegister from "./pages/Login&Register";
+import ChefPage from "./pages/ChefPage";
 
 function App() {
   return (
@@ -25,9 +26,10 @@ function App() {
           <Route path="/shopDetail/:id" element={<ShopDetail />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/chef" element={<Chef />} />
+          <Route path="/chef" element={<ChefPage/>} />
           <Route path="/appointment" element={<Appointments />} />
           <Route path="*" element={<ErrorPage/>} />
+          <Route path="/loginRegister" element={<LoginRegister/>} />
         </Route>
       </Routes>
     </BrowserRouter>

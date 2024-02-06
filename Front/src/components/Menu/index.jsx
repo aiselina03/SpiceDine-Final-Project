@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
 function Menu() {
+
+
+
   return (
     <>
       <div className="ourMenu">
@@ -26,12 +29,14 @@ function Menu() {
           <div className="menuView">
             <div className="view">
               <div className="category">
-                <button>STARTERS</button>
-                <button>MAIN</button>
-                <button>DESSERT</button>
-                <button>DRINKS</button>
+                <button onClick={() => handleFilter("starters")}>STARTERS</button>
+                <button onClick={() => handleFilter("main")}>MAIN</button>
+                <button onClick={() => handleFilter("dessert")}>DESSERT</button>
+                <button onClick={() => handleFilter("drinks")}> DRINKS</button>
               </div>
-              <div className="menuList"></div>
+              <div className="menuList">
+               
+              </div>
             </div>
           </div>
         </div>

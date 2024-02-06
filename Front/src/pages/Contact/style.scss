@@ -1,0 +1,87 @@
+.contactPage {
+  width: 100%;
+  max-width: 100%;
+  .contactUs {
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+      ),
+      url("/src/images/bg-contact.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .headers {
+      h2 {
+        font-size: 68px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+      p {
+        color: #cdc5b9;
+        font-size: 20px;
+        line-height: 40px;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+  .map {
+    width: 80%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto;
+    iframe {
+      width: 100%;
+      height: 535px;
+    }
+  }
+  .info {
+    width: 80%;
+    margin: 60px auto;
+    .infos {
+      min-height: 30vh;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 1px solid #393a34;
+      .contact,
+      .address,
+      .time {
+        text-align: center;
+        width: 400px;
+        height: 200px;
+        h2 {
+          font-size: 23px;
+          font-family: "Cormorant", serif;
+          color: #c7a97f;
+          font-weight: 400;
+          margin: 15px 0;
+        }
+        p {
+          color: #cdc5b9;
+          font-size: 16px;
+          line-height: 25px;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+      .address {
+        border-left: 1px solid #393a34;
+        border-right: 1px solid #393a34;
+      }
+    }
+  }
+
+}

@@ -8,9 +8,10 @@ import Video from "../../components/Video";
 import Menu from "../../components/Menu";
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
+import Cursor from "../../components/Cursor";
 import FeedBack from "../../components/FeedBack";
 import HomeChef from "../../components/HomeChef";
-import Cursor from "../../components/Cursor";
+import { Helmet } from "react-helmet-async";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,10 @@ function Home() {
 
   return (
     <>
+       <Helmet>
+        <title>SpiceDine</title>
+        <link rel="icon" href="https://png.pngitem.com/pimgs/s/530-5308172_restaurant-gastronomique-icone-hd-png-download.png" />
+      </Helmet>
       {loading ? (
         <div className="loaderCenter">
           <div className="loader">

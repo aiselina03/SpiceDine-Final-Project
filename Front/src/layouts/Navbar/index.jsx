@@ -94,7 +94,7 @@ function Navbar() {
             <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
             </NavLink>
-            <NavLink>
+            <NavLink to={"/loginRegister"}>
               <i className="fa-light fa-user"></i>
             </NavLink>
             <NavLink to={"/basket"}>
