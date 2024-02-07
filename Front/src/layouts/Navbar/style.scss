@@ -119,62 +119,66 @@
             color: #c7a97f;
           }
         }
-        .pages {
-          cursor: pointer;
-          font-family: "Roboto", sans-serif;
-          font-weight: 500;
-          color: #cdc5b9;
+      }
+    }
+
+    .pages {
+      cursor: pointer;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      color: #cdc5b9;
+
+      &:hover {
+        .menus {
+          opacity: 1;
+          width: 170px;
+          height: auto;
+          transition: all 300ms;
+        }
+      }
+
+      .menus {
+        position: absolute;
+        margin-top: 20px;
+        opacity: 0;
+        font-size: 15px;
+        background-color: #16272d;
+        padding: 15px;
+        a {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          font-size: 15px;
           &:hover {
-            .menus {
-              opacity: 1;
-              width: 170px;
-              height: auto;
-              transition: all 300ms;
-            }
-          }
-          .menus {
-            position: absolute;
-            margin-top: 20px;
-            opacity: 0;
-            font-size: 15px;
-            background-color: #16272d;
-            a {
-              padding: 15px;
-              display: flex;
-              flex-direction: column;
-              font-size: 15px;
-              &:hover {
-                color: #c7a97f;
-              }
-            }
+            color: #c7a97f;
           }
         }
       }
     }
-    .icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      .fa-light {
-        cursor: pointer;
-        color: #cdc5b9;
-        transition: all 700ms;
-        font-size: 19px;
-        &:hover {
-          color: #c7a97f;
-          transform: rotateY(360deg);
-        }
-      }
-      a {
-        color: #cdc5b9;
-        transition: all 700ms;
-        font-size: 19px;
-        &:hover {
-          color: #c7a97f;
-          transform: rotateY(360deg);
-        }
-      }
+  }
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .fa-light {
+    cursor: pointer;
+    color: #cdc5b9;
+    transition: all 700ms;
+    font-size: 19px;
+    &:hover {
+      color: #c7a97f;
+      transform: rotateY(360deg);
+    }
+  }
+  a {
+    color: #cdc5b9;
+    transition: all 700ms;
+    font-size: 19px;
+    &:hover {
+      color: #c7a97f;
+      transform: rotateY(360deg);
     }
   }
 }

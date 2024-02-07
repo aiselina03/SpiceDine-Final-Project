@@ -4,6 +4,7 @@ import { createProduct, deleteProduct, getAllProducts, getProduct, updateProduct
 export const menuRouter= express.Router()
 
 menuRouter.get('/', getAllProducts)
+menuRouter.get('/:category', getAllProducts);
 menuRouter.get('/:id',getProduct)
 menuRouter.post('/', createProduct)
 menuRouter.put('/:id', updateProduct)

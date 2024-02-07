@@ -1,5 +1,10 @@
-.video {
-  background-image: url("/src/images/video-image.jpg");
+.videoAbout {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/src/images/bg-chef.jpg");
   height: 70vh;
   width: 100%;
   max-width: 100%;
@@ -8,13 +13,8 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
+  background-attachment: fixed;
   cursor: pointer;
-  &:hover {
-    animation-fill-mode: forwards;
-    background-origin: center;
-    animation: zoomin 10s ease-in-out;
-  }
-
   .play {
     cursor: pointer;
     &:hover {
@@ -60,7 +60,7 @@
     display: none;
     z-index: 2;
   }
-  &.video-show {
+  &.video-showed {
     &:before {
       content: "";
       position: absolute;

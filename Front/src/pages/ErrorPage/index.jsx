@@ -27,7 +27,6 @@ function ErrorPage() {
             <div className="opacity"></div>
           </div>
         </Link>
-        <div className="circle"></div>
       </div>
       <Mode />
       <Scroll />

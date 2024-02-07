@@ -12,6 +12,8 @@ import Appointments from "./pages/Appointment";
 import ErrorPage from "./pages/ErrorPage";
 import LoginRegister from "./pages/Login&Register";
 import ChefPage from "./pages/ChefPage";
+import Faq from "./pages/FAQ";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/chef" element={<ChefPage/>} />
           <Route path="/appointment" element={<Appointments />} />
+          <Route path="/services" element={<Services/>} />
+          <Route path="/faq" element={<Faq/>} />
           <Route path="*" element={<ErrorPage/>} />
           <Route path="/loginRegister" element={<LoginRegister/>} />
         </Route>

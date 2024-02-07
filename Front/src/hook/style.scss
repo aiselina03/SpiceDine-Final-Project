@@ -152,17 +152,79 @@ body {
       }
     }
   }
-  .contactPage {
-    .contactUs {
-      .headers {
+  .aboutPage {
+    .aboutRestaurant {
+      .textAbout {
+        span {
+          color: var(--main-p-color);
+        }
         h2 {
           color: var(--main-text-color);
         }
         p {
           color: var(--main-p-color);
         }
+        .btn {
+          &:hover {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          p {
+            color: white;
+          }
+        }
       }
     }
+    .aboutSlider {
+      .slick-dots {
+        li button:before {
+          color: var(--main-text-color) !important;
+        }
+      }
+    }
+    .counterContainer {
+      .counts {
+        border-bottom: 1px solid var(--main-category-border-color);
+      }
+    }
+    .aboutContainer {
+      .aboutStory {
+        .story {
+          span {
+            color: var(--main-p-color);
+          }
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+          .btn {
+            &:hover {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .feedBack {
+      .comments {
+        background-color: var(--main-some-bg-color);
+        .feed {
+          p {
+            color: var(--main-book-color);
+          }
+        }
+      }
+    }
+  }
+  .contactPage {
     .info {
       .infos {
         border-bottom: 1px solid var(--main-category-border-color);

@@ -1,14 +1,19 @@
 import { MenuModel } from "../Model/MenuModel.js";
 
 export const getAllProducts = async (req, res) => {
-    try {
-        const products = await MenuModel.find({});
+    try { 
+        let products;
+        if (req.params.category) {
+            const categoryName = req.params.category;
+            products = await MenuModel.find({ category: categoryName });
+        } else {
+            products = await MenuModel.find({});
+        }
         res.json(products);
     } catch (error) {
-        res.send(error.message);
+        res.status(500).json({ message: error.message });
     }
 }
-
 export const getProduct =  async (req, res) => {
     try {
         const { id } = req.params;

@@ -12,9 +12,11 @@
   "dependencies": {
     "formik": "^2.4.5",
     "react": "^18.2.0",
+    "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^6.21.3",
+    "react-scroll-trigger": "^0.6.14",
     "react-slick": "^0.30.1",
     "sass": "^1.70.0",
     "slick-carousel": "^1.8.1",

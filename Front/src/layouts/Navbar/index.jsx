@@ -19,18 +19,23 @@ function Navbar() {
   return (
     <>
       <div
-        className={`navbar ${sticky === true ? "sticky" : "" || 
-          location.pathname === "/about" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/contact" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/menu" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/shop" ? "navbarBcgColor"  : "" ||
-          location.pathname === `/shopDetail/${id}` ? "navbarBcgColor"  : "" ||
-          location.pathname === "/basket" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/wishlist" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/chef" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/appointment" ? "navbarBcgColor"  : "" ||
-          location.pathname === "/*" ? "navbarBcgColor"  : "" 
-        }`}  
+        className={`navbar ${
+          sticky === true
+            ? "sticky"
+            : "" || location.pathname === "/menu"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/shop"
+            ? "navbarBcgColor"
+            : "" || location.pathname === `/shopDetail/${id}`
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/basket"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/wishlist"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/*"
+            ? "navbarBcgColor"
+            : ""
+        }`}
       >
         <div className="header">
           <div className="message">
@@ -69,17 +74,23 @@ function Navbar() {
               <li>
                 <NavLink to={"/"}>HOME</NavLink>
               </li>
+              <li className="pages">
+                <p>
+                  PAGES <i className="fa-sharp fa-light fa-chevron-down"></i>
+                </p>
+                <div className="menus">
+                  <NavLink to={"/chef"}>Chef</NavLink>
+                  <NavLink to={"/appointment"}>Appointment</NavLink>
+                  <NavLink to={"/services"}>Services</NavLink>
+                  <NavLink to={"/faq"}>FAQ</NavLink>
+                  <NavLink to={"*"}>Page 404</NavLink>
+                </div>
+              </li>
               <li>
                 <NavLink to={"/about"}>ABOUT</NavLink>
               </li>
-              <li className="pages">
-                PAGES <i className="fa-sharp fa-light fa-chevron-down"></i>
-                <div className="menus">
-                  <NavLink to={"/menu"}>Menu</NavLink>
-                  <NavLink to={"/chef"}>Chef</NavLink>
-                  <NavLink to={"/appointment"}>Appointment</NavLink>
-                  <NavLink to={"*"}>Page 404</NavLink>
-                </div>
+              <li>
+                <NavLink to={"/menu"}>MENU</NavLink>
               </li>
               <li>
                 <NavLink to={"/shop"}>SHOP</NavLink>
