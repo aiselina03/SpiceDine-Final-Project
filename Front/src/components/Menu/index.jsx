@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
 function Menu() {
+  const [products, setProducts] = useState([]);
+  const [filterData, setFilterData] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:3000/menuWithCategory/")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
+  function handleFilter(categoryName) {
+    setFilterData(categoryName);
+  }
   return (
     <>
       <div className="ourMenu">
@@ -26,12 +38,22 @@ function Menu() {
           <div className="menuView">
             <div className="view">
               <div className="category">
-                <button>STARTERS</button>
-                <button>MAIN</button>
-                <button>DESSERT</button>
-                <button>DRINKS</button>
+                <button onClick={() => handleFilter("")}>ALL MENU</button>
+                <button onClick={() => handleFilter("starters")}> STARTERS</button>
+                <button onClick={() => handleFilter("main")}>MAIN</button>
+                <button onClick={() => handleFilter("dessert")}>DESSERT</button>
+                <button onClick={() => handleFilter("drinks")}> DRINKS</button>
               </div>
-              <div className="menuList"></div>
+              <div className="menuList">
+                {products
+                  .filter((x) => x.categoryId.categoryName.includes(filterData))
+                  .map((x) => (
+                    <>
+                      <h2>{x.name}</h2>
+                      <p>${x.price}</p>
+                    </>
+                  ))}
+              </div>
             </div>
           </div>
         </div>

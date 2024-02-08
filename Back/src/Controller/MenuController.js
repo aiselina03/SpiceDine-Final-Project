@@ -1,20 +1,15 @@
 import { MenuModel } from "../Model/MenuModel.js";
 
 export const getAllProducts = async (req, res) => {
-    try { 
-        let products;
-        if (req.params.category) {
-            const categoryName = req.params.category;
-            products = await MenuModel.find({ category: categoryName });
-        } else {
-            products = await MenuModel.find({});
-        }
+    try {
+        const products = await MenuModel.find({});
         res.json(products);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 }
-export const getProduct =  async (req, res) => {
+
+export const getProduct = async (req, res) => {
     try {
         const { id } = req.params;
         const products = await MenuModel.findById(id);
@@ -24,10 +19,11 @@ export const getProduct =  async (req, res) => {
     }
 }
 
-export const createProduct =  async (req, res) => {
+
+export const createProduct = async (req, res) => {
     try {
-        const {name, image,price, ingredient, category, description} = req.body;
-        const newProducts = new MenuModel({name, image,price, ingredient, category, description});
+        const { name, image, price, ingredient, categoryId, description } = req.body;
+        const newProducts = new MenuModel({ name, image, price, ingredient, categoryId, description });
         await newProducts.save();
         res.json(newProducts);
     } catch (error) {
@@ -35,18 +31,18 @@ export const createProduct =  async (req, res) => {
     }
 }
 
-export const updateProduct=  async (req, res) => {
+export const updateProduct = async (req, res) => {
     try {
         const { id } = req.params
-        const { name, image,price, ingredient, category, description} = req.body
-        const products = await MenuModel.findByIdAndUpdate(id, {name, image,price, ingredient, category, description});
+        const { name, image, price, ingredient, categoryId, description } = req.body
+        const products = await MenuModel.findByIdAndUpdate(id, { name, image, price, ingredient, categoryId, description });
         res.json(products)
     } catch (error) {
         res.send(error.message);
     }
 }
 
-export const deleteProduct =  async (req, res) => {
+export const deleteProduct = async (req, res) => {
     try {
         const { id } = req.params;
         const products = await MenuModel.findByIdAndDelete(id);

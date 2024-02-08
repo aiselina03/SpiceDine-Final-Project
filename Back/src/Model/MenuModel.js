@@ -5,8 +5,9 @@ const menuSchema = new Schema({
     image: String,
     price:Number,
     ingredient: String,
-    category: String,
+    categoryId: { type: Schema.Types.ObjectId, ref: 'CategoryModel' },
     description: String
 
 });
+
 export const MenuModel = mongoose.model("MenuModel", menuSchema);
