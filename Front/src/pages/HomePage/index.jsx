@@ -12,6 +12,7 @@ import Cursor from "../../components/Cursor";
 import FeedBack from "../../components/FeedBack";
 import HomeChef from "../../components/HomeChef";
 import { Helmet } from "react-helmet-async";
+import BestSeller from "../../components/BestSeller";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -44,6 +45,7 @@ function Home() {
             <AboutIcons />
             <Menu />
             <BookingTable />
+            <BestSeller/>
             <Video />
             <HomeChef/>
             <FeedBack />

@@ -19,11 +19,10 @@ export const getProduct = async (req, res) => {
     }
 }
 
-
 export const createProduct = async (req, res) => {
     try {
-        const { name, image, price, ingredient, categoryId, description } = req.body;
-        const newProducts = new MenuModel({ name, image, price, ingredient, categoryId, description });
+        const { name, price, ingredient, categoryId, description } = req.body;
+        const newProducts = new MenuModel({ name, image: "http://localhost:3000/image/" + req.uploadFileName, price, ingredient, categoryId, description });
         await newProducts.save();
         res.json(newProducts);
     } catch (error) {
@@ -34,8 +33,8 @@ export const createProduct = async (req, res) => {
 export const updateProduct = async (req, res) => {
     try {
         const { id } = req.params
-        const { name, image, price, ingredient, categoryId, description } = req.body
-        const products = await MenuModel.findByIdAndUpdate(id, { name, image, price, ingredient, categoryId, description });
+        const { name, price, ingredient, categoryId, description } = req.body
+        const products = await MenuModel.findByIdAndUpdate(id, { name, image: "http://localhost:3000/image/" + req.uploadFileName, price, ingredient, categoryId, description });
         res.json(products)
     } catch (error) {
         res.send(error.message);

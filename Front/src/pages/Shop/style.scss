@@ -1,0 +1,96 @@
+.shopCards {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  gap: 50px;
+  justify-content: center;
+  .shopCard {
+    width: 300px;
+    height: 400px;
+    .image {
+      width: 300px;
+      height: 340px;
+      position: relative;
+      &:hover {
+        .hover {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hover {
+        transition: all 600ms;
+        opacity: 0;
+        .cart-shopping {
+          cursor: pointer;
+          position: absolute;
+          bottom: 40px;
+          left: 20%;
+          width: 40px;
+          height: 40px;
+          background: #c7a97f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .fa-cart-shopping {
+            color: white;
+            font-size: 18px;
+          }
+        }
+        .heart {
+          cursor: pointer;
+          position: absolute;
+          bottom: 40px;
+          left: 45%;
+          width: 40px;
+          height: 40px;
+          background: #c7a97f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .fa-heart {
+            font-size: 18px;
+            color: white;
+          }
+        }
+        .eye {
+          cursor: pointer;
+          position: absolute;
+          bottom: 40px;
+          left: 70%;
+          width: 40px;
+          height: 40px;
+          background: #c7a97f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .fa-eye {
+            font-size: 18px;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .text {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        width: 250px;
+        font-family: "Cormorant", serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #cdc5b9;
+      }
+      p {
+        color: #c7a97f;
+        font-size: 16px;
+        font-family: "Roboto", serif;
+      }
+    }
+  }
+}

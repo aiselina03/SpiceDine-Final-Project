@@ -20,7 +20,14 @@ function BookingTable() {
           <div className="service">
             <h2>Please select service:</h2>
             <Formik
-              initialValues={{ name: "", phone: "", date: "", time: "",category:"" ,service:""}}
+              initialValues={{
+                name: "",
+                phone: "",
+                date: "",
+                time: "",
+                category: "",
+                service: "",
+              }}
               validationSchema={Yup.object({
                 name: Yup.string(),
                 phone: Yup.number(),
@@ -28,7 +35,6 @@ function BookingTable() {
                 time: Yup.string(),
                 category: Yup.string(),
                 service: Yup.string(),
-
               })}
               onSubmit={(values, { setSubmitting, resetForm }) => {
                 setTimeout(() => {
@@ -110,7 +116,6 @@ function BookingTable() {
                     <ErrorMessage name="time" />
                   </div>
                 </div>
-
                 <div className="btn">
                   <button type="submit">BOOK NOW</button>
                   <div className="opacity"></div>

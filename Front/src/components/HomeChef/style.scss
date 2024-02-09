@@ -5,10 +5,6 @@
   .chefContainer {
     width: 90%;
     margin: 60px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     .header {
       text-align: center;
       h2 {
@@ -28,13 +24,10 @@
       }
     }
     .chefs {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      align-items: center;
-      justify-content: center;
-      gap: 80px;
+      margin-top: 50px;
       .chef {
         text-align: center;
+        margin-right: 30px;
         .chefImage {
           overflow: hidden;
           position: relative;
@@ -109,6 +102,22 @@
           margin-top: 10px;
         }
       }
+    }
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+
+  .slick-next {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: -40px !important;
+    li button:before {
+      color: #c7a97f !important;
+      font-size: 10px !important;
     }
   }
 }

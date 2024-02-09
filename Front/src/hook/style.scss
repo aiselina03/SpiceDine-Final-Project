@@ -6,6 +6,7 @@
   --main-book-color: #cdc5b9;
   --main-menu-bg-color: #0b1315;
   --main-category-border-color: #393a34;
+  --main-category-button-color: #cdc5b9;
 }
 
 .light {
@@ -16,6 +17,7 @@
   --main-book-color: #0b1315;
   --main-menu-bg-color: #faedda;
   --main-category-border-color: #c7a97f;
+  --main-category-button-color: #0b1315;
 }
 
 body {
@@ -122,7 +124,16 @@ body {
             .category {
               border-bottom: 1px solid var(--main-category-border-color);
               button {
-                color: var(--main-book-color);
+                color: var(--main-category-button-color);
+              }
+            }
+            .menuList {
+              .product {
+                .head {
+                  p {
+                    color: var(--main-p-color);
+                  }
+                }
               }
             }
           }
@@ -146,6 +157,34 @@ body {
             }
             h2 {
               color: var(--main-text-color);
+            }
+          }
+        }
+      }
+    }
+    .bestSeller {
+      .bestContainer {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .bestCards {
+          .bestCard {
+            .text {
+              h3 {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+        .btn {
+          &:hover {
+            p {
+              color: var(--main-p-color);
             }
           }
         }

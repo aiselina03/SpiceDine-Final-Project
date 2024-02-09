@@ -39,7 +39,7 @@ function Menu() {
             <div className="view">
               <div className="category">
                 <button onClick={() => handleFilter("")}>ALL MENU</button>
-                <button onClick={() => handleFilter("starters")}> STARTERS</button>
+                <button onClick={() => handleFilter("starters")}>STARTERS</button>
                 <button onClick={() => handleFilter("main")}>MAIN</button>
                 <button onClick={() => handleFilter("dessert")}>DESSERT</button>
                 <button onClick={() => handleFilter("drinks")}> DRINKS</button>
@@ -49,8 +49,15 @@ function Menu() {
                   .filter((x) => x.categoryId.categoryName.includes(filterData))
                   .map((x) => (
                     <>
-                      <h2>{x.name}</h2>
-                      <p>${x.price}</p>
+                      <div className="product">
+                        <div className="head">
+                          <h2>{x.name}</h2>
+                          <p>{x.ingredient}</p>
+                        </div>
+                        <div className="price">
+                          <p>${x.price}</p>
+                        </div>
+                      </div>
                     </>
                   ))}
               </div>
