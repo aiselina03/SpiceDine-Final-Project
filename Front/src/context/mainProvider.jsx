@@ -1,15 +1,16 @@
-import React from 'react'
-import BasketProvider from './basketContext'
-import WishlistProvider from './wishlistContext'
+import React from "react";
+import BasketProvider from "./basketContext";
+import WishlistProvider from "./wishlistContext";
+import UserProvider from "./userContext";
 
-function MainProvider({children}) {
+function MainProvider({ children }) {
   return (
-   <BasketProvider>
-    <WishlistProvider>
-      {children}
-    </WishlistProvider>
-   </BasketProvider>
-  )
+    <UserProvider>
+      <BasketProvider>
+        <WishlistProvider>{children}</WishlistProvider>
+      </BasketProvider>
+    </UserProvider>
+  );
 }
 
-export default MainProvider
+export default MainProvider;

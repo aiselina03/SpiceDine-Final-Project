@@ -10,10 +10,14 @@ import Basket from "./pages/Basket";
 import Wishlist from "./pages/Wishlist";
 import Appointments from "./pages/Appointment";
 import ErrorPage from "./pages/ErrorPage";
-import LoginRegister from "./pages/Login&Register";
 import ChefPage from "./pages/ChefPage";
 import Faq from "./pages/FAQ";
 import Services from "./pages/Services";
+import LoginPage from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import AdminPanel from "./pages/AdminPanel";
+import ResetPassword from "./pages/ResetPassword";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -28,12 +32,16 @@ function App() {
           <Route path="/shopDetail/:id" element={<ShopDetail />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/chef" element={<ChefPage/>} />
+          <Route path="/chef" element={<ChefPage />} />
           <Route path="/appointment" element={<Appointments />} />
-          <Route path="/services" element={<Services/>} />
-          <Route path="/faq" element={<Faq/>} />
-          <Route path="*" element={<ErrorPage/>} />
-          <Route path="/loginRegister" element={<LoginRegister/>} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="*" element={<ErrorPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/resetPassword" element={<ResetPassword/>} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
+          <Route path="/adminPanel" element={<AdminPanel />} />
         </Route>
       </Routes>
     </BrowserRouter>

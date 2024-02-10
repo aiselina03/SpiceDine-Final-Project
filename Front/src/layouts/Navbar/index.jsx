@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./style.scss";
 import { NavLink, useLocation, useParams } from "react-router-dom";
+import { UserContext } from "../../context/userContext";
 
 function Navbar() {
   const { id } = useParams();
   let location = useLocation();
   const [sticky, setSticky] = useState(false);
+  const { decode } = useContext(UserContext);
 
   function stickyNavbar() {
     if (window.scrollY >= 500) {
@@ -31,6 +33,14 @@ function Navbar() {
             : "" || location.pathname === "/wishlist"
             ? "navbarBcgColor"
             : "" || location.pathname === "/*"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/login"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/signUp"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/resetPassword"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/privacyPolicy"
             ? "navbarBcgColor"
             : ""
         }`}
@@ -96,6 +106,11 @@ function Navbar() {
               <li>
                 <NavLink to={"/contact"}>CONTACT</NavLink>
               </li>
+              {decode && decode.role === "admin" ? (
+                <li>
+                  <NavLink to={"/adminPanel"}>ADMIN PANEL</NavLink>
+                </li>
+              ) : null}
             </ul>
           </div>
           <div className="icons">
@@ -103,9 +118,16 @@ function Navbar() {
             <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
             </NavLink>
-            <NavLink to={"/loginRegister"}>
-              <i className="fa-light fa-user"></i>
-            </NavLink>
+            {decode ? (
+              <NavLink to={"/login"}>
+                <i className="fa-solid fa-user"></i>
+              </NavLink>
+            ) : (
+              <NavLink to={"/login"}>
+                <i className="fa-light fa-user"></i>
+              </NavLink>
+            )}
+
             <NavLink to={"/basket"}>
               <i className="fa-light fa-cart-shopping"></i>
             </NavLink>

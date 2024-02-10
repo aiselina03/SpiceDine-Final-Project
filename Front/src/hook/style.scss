@@ -7,6 +7,9 @@
   --main-menu-bg-color: #0b1315;
   --main-category-border-color: #393a34;
   --main-category-button-color: #cdc5b9;
+  --main-field-text-color: white;
+  --main-hover-color: #dcd7e3;
+  --main-privacy-p-color: #a5a099;
 }
 
 .light {
@@ -18,6 +21,10 @@
   --main-menu-bg-color: #faedda;
   --main-category-border-color: #c7a97f;
   --main-category-button-color: #0b1315;
+  --main-field-bg-color: #fff5e4;
+  --main-field-text-color: #0b1315;
+  --main-hover-color: #666666;
+  --main-privacy-p-color: #666666;
 }
 
 body {
@@ -488,6 +495,133 @@ body {
     }
     p {
       color: var(--main-p-color);
+    }
+  }
+  .loginPage {
+    .login {
+      .loginContent {
+        .form {
+          .input {
+            .label {
+              color: var(--main-book-color);
+            }
+            .field {
+              background-color: var(--main-field-bg-color);
+              color: var(--main-field-text-color);
+            }
+          }
+          .input2 {
+            .label {
+              color: var(--main-book-color);
+            }
+            .fields {
+              background-color: var(--main-field-bg-color);
+
+              .field {
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .loginText {
+            .checkbox {
+              .checkbox-input {
+                .label {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+          }
+
+          p {
+            &:hover {
+              color: var(--main-hover-color);
+            }
+          }
+        }
+        .haveAccount {
+          p {
+            color: var(--main-book-color);
+            a {
+              &:hover {
+                color: var(--main-hover-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .signUpPage {
+    .signUp {
+      .signUpContent {
+        .form {
+          .input {
+            .label {
+              color: var(--main-book-color);
+            }
+            .field {
+              background-color: var(--main-field-bg-color);
+              color: var(--main-field-text-color);
+            }
+          }
+          .input2 {
+            .label {
+              color: var(--main-book-color);
+            }
+            .fields {
+              background-color: var(--main-field-bg-color);
+
+              .field {
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .signUpText {
+            .privacy {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+        .haveAccount {
+          p {
+            color: var(--main-p-color);
+            a {
+              &:hover {
+                color: var(--main-hover-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .privacyPolicy {
+    .privacy {
+      p {
+        color: var(--main-privacy-p-color);
+      }
+    }
+  }
+  .resetPasswordPage {
+    .resetPassword {
+      .resetContent {
+        .form {
+          p {
+            color: var(--main-privacy-p-color);
+          }
+          .input {
+            .label {
+              color: var(--main-book-color);
+            }
+            .field {
+              background-color: var(--main-field-bg-color);
+              color: var(--main-field-text-color);
+            }
+          }
+        }
+      }
     }
   }
 }

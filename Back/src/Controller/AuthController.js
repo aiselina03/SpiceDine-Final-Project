@@ -1,12 +1,13 @@
 import jwt from "jsonwebtoken"
 import { UserModel } from "../Model/UserModel.js";
+import bcrypt from "bcrypt";
 
 export const register = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const {username, email, password } = req.body;
         const hash = bcrypt.hashSync( password, 12);
-        const newuser = new UserModel({ email, password:hash })
-        var token = jwt.sign({email: newuser.email, role: newuser.role}, process.env.JWT_SECRET_KEY ,{ expiresIn: '1h' });
+        const newuser = new UserModel({username, email, password:hash })
+        var token = jwt.sign({username: newuser.username, email: newuser.email, role: newuser.role}, process.env.JWT_SECRET_KEY ,{ expiresIn: '1h' });
         await newuser.save();
         res.json(token);
       } catch (error) {
