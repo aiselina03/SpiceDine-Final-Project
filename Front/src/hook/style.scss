@@ -314,6 +314,80 @@ body {
       }
     }
   }
+  .menuPage {
+    .startersMenu {
+      .sMenu {
+        .menuStarters {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .starters {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .mainMenu {
+      .mMenu {
+        .menuMain {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .main {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .dessertMenu {
+      .dMenu {
+        .menuDessert {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .dessert {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .drinksMenu {
+      .dMenu {
+        .menuDrinks {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .drinks {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .chefPage {
     .chefAbout {
       .chefMaster {

@@ -38,7 +38,7 @@ function Menu() {
           <div className="menuView">
             <div className="view">
               <div className="category">
-                <button onClick={() => handleFilter("")}>ALL MENU</button>
+                {/* <button onClick={() => handleFilter("")}>ALL MENU</button> */}
                 <button onClick={() => handleFilter("starters")}>STARTERS</button>
                 <button onClick={() => handleFilter("main")}>MAIN</button>
                 <button onClick={() => handleFilter("dessert")}>DESSERT</button>

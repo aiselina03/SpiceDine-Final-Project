@@ -22,8 +22,6 @@ function Navbar() {
         className={`navbar ${
           sticky === true
             ? "sticky"
-            : "" || location.pathname === "/menu"
-            ? "navbarBcgColor"
             : "" || location.pathname === "/shop"
             ? "navbarBcgColor"
             : "" || location.pathname === `/shopDetail/${id}`

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./style.scss";
 import { Helmet } from "react-helmet-async";
 import Scroll from "../../components/Scroll";
@@ -20,10 +20,19 @@ function Menu() {
         />
       </Helmet>
       <div className="menuPage">
-        <StartersMenu/>
-        <MainMenu/>
-        <DessertMenu/>
-        <DrinksMenu/>
+        <div className="ourMenu">
+          <div className="headers">
+            <h2>OUR MENU</h2>
+            <p>
+              Explore our menu with a wide range of Asian to European dishes,
+              dishes to suit <br /> all your tastes or events
+            </p>
+          </div>
+        </div>
+        <StartersMenu />
+        <MainMenu />
+        <DessertMenu />
+        <DrinksMenu />
       </div>
       <Mode />
       <Scroll />

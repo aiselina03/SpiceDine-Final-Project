@@ -13,9 +13,33 @@ function DessertMenu() {
   return (
     <>
       <div className="dessertMenu">
-      {products.map((x) => (
-          <h3>{x.name}</h3>
-        ))}
+      <div className="dMenu"> 
+       <div className="menuPhoto">
+            <h2>CHERRY PIE</h2>
+            <p>
+              Beans / Halloumi cheese / Asparagus / Courgettes / Cherry tomatoes
+            </p>
+            <h3>$15</h3>
+          </div>
+          <div className="menuDessert">
+            <div className="headers">
+              <p>Sweet</p>
+              <h1>DESSERT</h1>
+            </div>
+            {products.map((x) => (
+              <div className="dessert">
+                <div className="head">
+                  <h2>{x.name}</h2>
+                  <p>{x.ingredient}</p>
+                </div>
+                <div className="price">
+                  <p>${x.price}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        
+        </div>
       </div>
     </>
   );
