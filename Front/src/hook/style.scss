@@ -10,6 +10,8 @@
   --main-field-text-color: white;
   --main-hover-color: #dcd7e3;
   --main-privacy-p-color: #a5a099;
+  --main-pagination-hover-bg-color: white;
+  --main-pagination-hover-color: #c7a97f;
 }
 
 .light {
@@ -25,6 +27,8 @@
   --main-field-text-color: #0b1315;
   --main-hover-color: #666666;
   --main-privacy-p-color: #666666;
+  --main-pagination-hover-bg-color: #16272d;
+  --main-pagination-hover-color: white;
 }
 
 body {
@@ -618,6 +622,43 @@ body {
             .field {
               background-color: var(--main-field-bg-color);
               color: var(--main-field-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .cardsPages {
+    .cardsPage {
+      .shopFilter {
+        .filterCategories {
+          .head {
+            background-color: var(--main-some-bg-color);
+          }
+          .filter {
+            button {
+              color: var(--main-p-color);
+            }
+          }
+        }
+      }
+      .shop {
+        .shopCards {
+          .shopCard {
+            .text {
+              h3 {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+        .pagination {
+          .container {
+            button {
+              &:hover {
+                background-color: var(--main-pagination-hover-bg-color);
+                color: var(--main-pagination-hover-color);
+              }
             }
           }
         }

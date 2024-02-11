@@ -5,11 +5,15 @@ import { Link } from "react-router-dom";
 function Menu() {
   const [products, setProducts] = useState([]);
   const [filterData, setFilterData] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:3000/menuWithCategory/")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) =>{
+        setProducts(data)
+        setIsLoading(false)
+      });
   }, []);
 
   function handleFilter(categoryName) {
@@ -44,12 +48,18 @@ function Menu() {
                 <button onClick={() => handleFilter("dessert")}>DESSERT</button>
                 <button onClick={() => handleFilter("drinks")}> DRINKS</button>
               </div>
+              {isLoading ? (
+              <div className="loaderCenterCards">
+                <div className="loader">
+                <i className="fa-solid fa-spinner fa-spin"></i>
+                </div>
+              </div>
+            ) : (
               <div className="menuList">
                 {products
                   .filter((x) => x.categoryId.categoryName.includes(filterData))
                   .map((x) => (
-                    <>
-                      <div className="product">
+                      <div className="product" key={x._id}>
                         <div className="head">
                           <h2>{x.name}</h2>
                           <p>{x.ingredient}</p>
@@ -58,9 +68,8 @@ function Menu() {
                           <p>${x.price}</p>
                         </div>
                       </div>
-                    </>
                   ))}
-              </div>
+              </div>)}
             </div>
           </div>
         </div>

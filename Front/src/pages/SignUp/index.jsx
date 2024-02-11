@@ -11,7 +11,7 @@ import { UserContext } from "../../context/userContext";
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const { addToken } = useContext(UserContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function handleSubmit(values) {
     const { username, email, password } = values;
@@ -29,7 +29,7 @@ function SignUp() {
       .then((res) => res.json())
       .then((data) => {
         addToken(data);
-        navigate("/login")
+        navigate("/login");
       })
       .catch((error) => {
         console.error("Error during registration:", error.message);
@@ -54,7 +54,6 @@ function SignUp() {
                 username: "",
                 email: "",
                 password: "",
-                toggle: false,
               }}
               validationSchema={Yup.object({
                 username: Yup.string()
@@ -66,9 +65,9 @@ function SignUp() {
                 password: Yup.string()
                   .min(8, "Must be 8 characters at least")
                   .required("Required"),
-                toggle: Yup.boolean().oneOf([true], "Required"),
               })}
               onSubmit={(values, { setSubmitting }) => {
+                console.log(values);
                 handleSubmit(values);
                 setSubmitting(false);
               }}
@@ -131,6 +130,7 @@ function SignUp() {
                 <button type="submit">Sign Up</button>
               </Form>
             </Formik>
+
             <div className="haveAccount">
               <p>
                 Already have an account? <Link to={"/login"}> Log In</Link>

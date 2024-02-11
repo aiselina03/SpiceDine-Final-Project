@@ -3,11 +3,12 @@ import "./style.scss";
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 function ResetPassword() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="account">
@@ -30,6 +31,7 @@ function ResetPassword() {
           })}
           onSubmit={(values, { setSubmitting }) => {
             setSubmitting(false);
+            navigate("/login");
           }}
         >
           <Form className="form">

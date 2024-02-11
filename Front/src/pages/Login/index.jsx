@@ -51,7 +51,7 @@ function LoginPage() {
             <div className="loginContent">
               <h2>Login</h2>
               <Formik
-                initialValues={{ password: "", email: "", toggle: false }}
+                initialValues={{ password: "", email: "" }}
                 validationSchema={Yup.object({
                   password: Yup.string()
                     .min(8, "Must be 8 characters at least")
@@ -59,7 +59,6 @@ function LoginPage() {
                   email: Yup.string()
                     .email("Invalid email address")
                     .required("Required"),
-                  toggle: Yup.boolean().oneOf([true], "Required"),
                 })}
                 onSubmit={(values, { setSubmitting }) => {
                   handleSubmit(values);

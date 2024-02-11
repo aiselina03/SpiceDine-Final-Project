@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import { BasketContext } from "../../context/basketContext";
+import { WishlistContext } from "../../context/wishlistContext";
 
 function BestSeller() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const { addbasket } = useContext(BasketContext);
+  const { addRemoveWishlist, checkIsWishlist } = useContext(WishlistContext);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/menu")
       .then((res) => res.json())
-      .then((data) => setProducts(data.slice(7, 11)));
+      .then((data) => {
+        setProducts(data.slice(7, 11));
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -23,32 +31,52 @@ function BestSeller() {
               celebrate the flavors of fall with our limited-time special.
             </p>
           </div>
-          <div className="bestCards">
-            {products.map((x) => (
-              <div className="bestCard">
-                <div className="image">
-                  <img src={x.image} alt=""  />
-                  <div className="hover">
-                    <div className="cart-shopping">
-                      <i className="fa-light fa-cart-shopping"></i>
-                    </div>
-                    <div className="heart">
-                      <i className="fa-light fa-heart"></i>
-                    </div>
-                    <Link>
-                      <div className="eye">
-                        <i className="fa-light fa-eye"></i>
+          {isLoading ? (
+            <div className="loaderCenterCards">
+              <div className="loader">
+              <i className="fa-solid fa-spinner fa-spin"></i>
+              </div>
+            </div>
+          ) : (
+            <div className="bestCards">
+              {products.map((x) => (
+                <div className="bestCard" key={x._id}>
+                  <div className="image">
+                    <img src={x.image} alt="" />
+                    <div className="hover">
+                      <div
+                        className="cart-shopping"
+                        onClick={() => addbasket(x)}
+                      >
+                        <i className="fa-light fa-cart-shopping"></i>
                       </div>
-                    </Link>
+                      <div
+                        className="heart"
+                        onClick={() => addRemoveWishlist(x)}
+                      >
+                        <i
+                          className={`${
+                            checkIsWishlist(x)
+                              ? "fa-sharp fa-solid fa-heart"
+                              : "fa-sharp fa-light fa-heart"
+                          }`}
+                        ></i>
+                      </div>
+                      <Link>
+                        <div className="eye">
+                          <i className="fa-light fa-eye"></i>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text">
+                    <h3>{x.name}</h3>
+                    <p>${x.price}.00</p>
                   </div>
                 </div>
-                <div className="text">
-                  <h3>{x.name}</h3>
-                  <p>${x.price}.00</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
           <Link to={"/shop"}>
             <div className="btn">
               <p>VIEW ALL PRODUCTS</p>

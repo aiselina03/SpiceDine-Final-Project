@@ -27,7 +27,6 @@ function ChefPage() {
             </p>
           </div>
         </div>
-
         <ChefMaster />
       </div>
       <Mode />

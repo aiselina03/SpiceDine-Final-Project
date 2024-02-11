@@ -3,11 +3,15 @@ import "./style.scss";
 
 function StartersMenu() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:3000/menuByCategory/65c529681f52b89d9036716b")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) =>{
+        setProducts(data)
+        setIsLoading(false)
+      } );
   }, []);
 
   return (
@@ -26,8 +30,16 @@ function StartersMenu() {
               <p>Tasty</p>
               <h1>STARTERS</h1>
             </div>
-            {products.map((x) => (
-              <div className="starters">
+            {isLoading ? (
+              <div className="loaderCenterCards">
+                <div className="loader">
+                <i className="fa-solid fa-spinner fa-spin"></i>
+                </div>
+              </div>
+            ) : (
+            <>
+             {products.map((x) => (
+              <div className="starters" key={x._id}>
                 <div className="head">
                   <h2>{x.name}</h2>
                   <p>{x.ingredient}</p>
@@ -37,6 +49,8 @@ function StartersMenu() {
                 </div>
               </div>
             ))}
+            </>
+            )}
           </div>
         </div>
       </div>
