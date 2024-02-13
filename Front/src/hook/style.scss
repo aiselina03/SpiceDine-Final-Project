@@ -12,6 +12,9 @@
   --main-privacy-p-color: #a5a099;
   --main-pagination-hover-bg-color: white;
   --main-pagination-hover-color: #c7a97f;
+  --main-search-bg-color: transparent;
+  --main-search-basket-table-color: #ffffff33;
+  --main-basket-p-color: #a5a099;
 }
 
 .light {
@@ -29,6 +32,9 @@
   --main-privacy-p-color: #666666;
   --main-pagination-hover-bg-color: #16272d;
   --main-pagination-hover-color: white;
+  --main-search-bg-color: #faedda;
+  --main-search-basket-table-color: #c7a97f;
+  --main-basket-p-color: #0b1315;
 }
 
 body {
@@ -631,6 +637,15 @@ body {
   .cardsPages {
     .cardsPage {
       .shopFilter {
+        .search {
+          background-color: var(--main-search-bg-color);
+          .fa-magnifying-glass {
+            color: var(--main-p-color);
+          }
+          input {
+            color: var(--main-p-color);
+          }
+        }
         .filterCategories {
           .head {
             background-color: var(--main-some-bg-color);
@@ -641,8 +656,35 @@ body {
             }
           }
         }
+        .recentProducts {
+          .head {
+            background-color: var(--main-some-bg-color);
+          }
+          .recent {
+            .item {
+              .text {
+                p {
+                  color: var(--main-p-color);
+                }
+              }
+            }
+          }
+        }
       }
       .shop {
+        .selecSection {
+          .length {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .select {
+            .sortOptions {
+              background-color: var(--main-search-bg-color);
+              color: var(--main-p-color);
+            }
+          }
+        }
         .shopCards {
           .shopCard {
             .text {
@@ -658,6 +700,103 @@ body {
               &:hover {
                 background-color: var(--main-pagination-hover-bg-color);
                 color: var(--main-pagination-hover-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .basketPage {
+    .basket {
+      .table {
+        table {
+          border: 1px solid var(--main-search-basket-table-color);
+          thead {
+            tr {
+              th {
+                border: 1px solid var(--main-search-basket-table-color);
+                color: var(--main-privacy-p-color);
+              }
+            }
+          }
+          tbody {
+            tr {
+              border: 1px solid var(--main-search-basket-table-color);
+              td {
+                color: var(--main-basket-p-color);
+                border: 1px solid var(--main-search-basket-table-color);
+                .fa-trash-can {
+                  &:hover {
+                    color: var(--main-privacy-p-color);
+                  }
+                }
+              }
+            }
+          }
+
+          tfoot {
+            tr {
+              td {
+                .column {
+                  input {
+                    border: 1px solid var(--main-privacy-p-color);
+                    color: var(--main-basket-p-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .checkout {
+          background-color: var(--main-some-bg-color);
+          h1 {
+            color: var(--main-text-color);
+          }
+          .subTotal {
+            h3 {
+              color: var(--main-privacy-p-color);
+            }
+            p {
+              color: var(--main-text-color);
+            }
+          }
+          .cardTotal {
+            h3 {
+              color: var(--main-privacy-p-color);
+            }
+            p {
+              color: var(--main-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .wishlistPage {
+    .wishlist {
+      .table {
+        table {
+          border: 1px solid var(--main-search-basket-table-color);
+          thead {
+            tr {
+              th {
+                border: 1px solid var(--main-search-basket-table-color);
+                color: var(--main-privacy-p-color);
+              }
+            }
+          }
+          tbody {
+            tr {
+              border: 1px solid var(--main-search-basket-table-color);
+              td {
+                color: var(--main-basket-p-color);
+                border: 1px solid var(--main-search-basket-table-color);
+                .fa-sharp {
+                  &:hover {
+                    color: var(--main-privacy-p-color);
+                  }
+                }
               }
             }
           }

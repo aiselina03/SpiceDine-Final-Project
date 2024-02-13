@@ -15,16 +15,16 @@ function Footer() {
                   <Link to={"/appointment"}>Appointment</Link>
                 </li>
                 <li>
-                  <Link>Prices</Link>
+                  <Link to={"/menu"}>Menu</Link>
                 </li>
                 <li>
-                  <Link>Team</Link>
+                  <Link to={"/about"}>About</Link>
                 </li>
                 <li>
-                  <Link>Services</Link>
+                  <Link to={"/services"}>Services</Link>
                 </li>
                 <li>
-                  <Link>Faq</Link>
+                  <Link to={"/faq"}>Faq</Link>
                 </li>
               </ul>
             </div>
@@ -68,19 +68,19 @@ function Footer() {
               <h2>SERVICES</h2>
               <ul>
                 <li>
-                  <Link>Privacy Policy</Link>
+                  <Link to={"/privacyPolicy"}>Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link>Cart</Link>
+                  <Link to={"/basket"}>Cart</Link>
                 </li>
                 <li>
                   <Link>Checkout</Link>
                 </li>
                 <li>
-                  <Link>My account</Link>
+                  <Link to={"/login"}>My account</Link>
                 </li>
                 <li>
-                  <Link>Shop</Link>
+                  <Link to={"/shop"}>Shop</Link>
                 </li>
               </ul>
             </div>

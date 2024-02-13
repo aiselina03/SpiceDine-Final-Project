@@ -2,12 +2,18 @@ import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
+
 function About() {
+
+
   return (
     <>
       <div className="aboutSection">
         <div className="about">
-          <div className="story">
+          <div
+            className="story"
+
+          >
             <div className="info">
               <img src="/src/images/sepreter.png" alt="" />
               <h2>
@@ -31,10 +37,10 @@ function About() {
               <img src="/src/images/restaurant-Image1.jpg" alt="" />
             </div>
           </div>
-          <div className="restaurantImage">
+          <div className="restaurantImage"  >
             <img src="/src/images/restaurant-Image2.jpg" alt="" />
           </div>
-          <div className="time">
+          <div className="time"  >
             <div className="tallSquare">
               <div className="square">
                 <div className="lunchTime">

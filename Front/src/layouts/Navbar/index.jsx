@@ -40,6 +40,8 @@ function Navbar() {
             ? "navbarBcgColor"
             : "" || location.pathname === "/privacyPolicy"
             ? "navbarBcgColor"
+            : "" || location.pathname === "/adminPanel"
+            ? "navbarBcgColor"
             : ""
         }`}
       >

@@ -7,7 +7,7 @@ import { WishlistContext } from "../../context/wishlistContext";
 function BestSeller() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { addbasket } = useContext(BasketContext);
+  const { addBasket } = useContext(BasketContext);
   const { addRemoveWishlist, checkIsWishlist } = useContext(WishlistContext);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ function BestSeller() {
                     <div className="hover">
                       <div
                         className="cart-shopping"
-                        onClick={() => addbasket(x)}
+                        onClick={() => addBasket(x)}
                       >
                         <i className="fa-light fa-cart-shopping"></i>
                       </div>
@@ -62,7 +62,7 @@ function BestSeller() {
                           }`}
                         ></i>
                       </div>
-                      <Link>
+                      <Link to={"/shopDetail/"+x._id}>
                         <div className="eye">
                           <i className="fa-light fa-eye"></i>
                         </div>

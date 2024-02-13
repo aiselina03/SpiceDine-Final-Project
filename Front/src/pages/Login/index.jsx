@@ -7,6 +7,7 @@ import Cursor from "../../components/Cursor";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import { UserContext } from "../../context/userContext";
+import Account from "../../components/Account";
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -44,8 +45,7 @@ function LoginPage() {
         <div className="login">
           {decode ? (
             <>
-              <h2>hello</h2>
-              <p onClick={logOut}>log out</p>
+            <Account/>
             </>
           ) : (
             <div className="loginContent">
