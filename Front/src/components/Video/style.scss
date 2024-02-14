@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
+  background-repeat: no-repeat;
   cursor: pointer;
   &:hover {
     animation-fill-mode: forwards;
@@ -74,6 +75,107 @@
 
     iframe {
       display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .video {
+    height: 35vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 100px;
+        height: 100px;
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .video {
+    height: 45vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 120px;
+        height: 120px;
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .video {
+    height: 55vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 140px;
+        height: 140px;
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1450px) {
+  .video {
+    height: 60vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 150px;
+        height: 150px;
+        h2 {
+          font-size: 29px;
+        }
+      }
     }
   }
 }

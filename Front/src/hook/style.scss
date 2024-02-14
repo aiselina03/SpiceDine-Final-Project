@@ -55,11 +55,29 @@ body {
         .time {
           .tallSquare {
             .square {
-              h2 {
-                color: var(--main-text-color);
+              .lunchTime {
+                h2 {
+                  color: var(--main-text-color);
+                }
+                p {
+                  color: var(--main-p-color);
+                }
               }
-              p {
-                color: var(--main-p-color);
+              .dinnerTime {
+                h2 {
+                  color: var(--main-text-color);
+                }
+                p {
+                  color: var(--main-p-color);
+                }
+              }
+              .contactNow {
+                h2 {
+                  color: var(--main-text-color);
+                }
+                p {
+                  color: var(--main-p-color);
+                }
               }
             }
           }
@@ -798,6 +816,67 @@ body {
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  .details {
+    .detailPage {
+      .detail {
+        .info {
+          .stars {
+            .fa-sharp {
+              color: var(--main-p-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .ingredient {
+            color: var(--main-category-button-color);
+          }
+          .desc {
+            color: var(--main-p-color);
+          }
+
+          .text {
+            p {
+              color: var(--main-category-button-color);
+            }
+          }
+          .share {
+            p {
+              color: var(--main-category-button-color);
+            }
+          }
+        }
+      }
+    }
+    .bestSeller {
+      .bestContainer {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .bestCards {
+          .bestCard {
+            .text {
+              h3 {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+        .btn {
+          &:hover {
+            p {
+              color: var(--main-p-color);
             }
           }
         }

@@ -14,6 +14,7 @@ function FeedBack() {
     speed: 1500,
     autoplay: true,
     autoplaySpeed: 4000,
+
   };
   return (
     <>

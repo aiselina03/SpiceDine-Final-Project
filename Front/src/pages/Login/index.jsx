@@ -11,7 +11,7 @@ import Account from "../../components/Account";
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
-  const { addToken, decode, logOut } = useContext(UserContext);
+  const { addToken, decode } = useContext(UserContext);
 
   function handleSubmit(values) {
     const { email, password } = values;

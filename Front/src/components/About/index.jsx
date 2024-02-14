@@ -5,15 +5,11 @@ import { Link } from "react-router-dom";
 
 function About() {
 
-
   return (
     <>
       <div className="aboutSection">
         <div className="about">
-          <div
-            className="story"
-
-          >
+          <div className="story">
             <div className="info">
               <img src="/src/images/sepreter.png" alt="" />
               <h2>
@@ -21,9 +17,9 @@ function About() {
               </h2>
               <p>
                 Every restaurant has a story to tell, and these narratives are
-                as <br />
+                as 
                 diverse and rich as the flavors on their menus. A restaurant’s
-                story <br />
+                story 
                 weaves together its history, concept, culinary vision.
               </p>
               <Link to={"./about"}>
@@ -37,7 +33,8 @@ function About() {
               <img src="/src/images/restaurant-Image1.jpg" alt="" />
             </div>
           </div>
-          <div className="restaurantImage"  >
+          <div className="sec">
+                <div className="restaurantImage"  >
             <img src="/src/images/restaurant-Image2.jpg" alt="" />
           </div>
           <div className="time"  >
@@ -70,6 +67,8 @@ function About() {
               </div>
             </div>
           </div>
+          </div>
+      
         </div>
       </div>
     </>

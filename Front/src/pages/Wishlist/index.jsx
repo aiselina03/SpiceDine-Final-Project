@@ -1,16 +1,18 @@
 import React, { useContext } from "react";
 import "./style.scss";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import { BasketContext } from "../../context/basketContext";
 import { WishlistContext } from "../../context/wishlistContext";
+// import { UserContext } from "../../context/userContext";
 
 function Wishlist() {
   const { addBasket } = useContext(BasketContext);
   const { wishlist, addRemoveWishlist } = useContext(WishlistContext);
+  // const {  decode } = useContext(UserContext);
   return (
     <>
       <Helmet>
@@ -28,7 +30,9 @@ function Wishlist() {
           Wishlist
         </p>
       </div>
-      <div className="wishlistPage">
+      {/* {decode ? ( */}
+            <> 
+           <div className="wishlistPage">
         <div className="wishlist">
           <div className="table">
             <table>
@@ -52,7 +56,9 @@ function Wishlist() {
                       ></i>
                     </td>
                     <td>
+                    <Link to={"/shopDetail/"+x._id}>
                       <img src={x.image} alt="" />
+                      </Link>
                     </td>
                     <td>
                       <h2 className="name">{x.name}</h2>
@@ -72,6 +78,9 @@ function Wishlist() {
           </div>
         </div>
       </div>
+            </>
+        {/* ) : (<Navigate to={"/login"}></Navigate>)} */}
+    
       <Mode />
       <Scroll />
       <Cursor />

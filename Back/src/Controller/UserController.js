@@ -1,4 +1,3 @@
-import { decode } from "jsonwebtoken";
 import { UserModel } from "../Model/UserModel.js";
 
 export const getAllUsers = async (req, res) => {
@@ -14,6 +13,9 @@ export const getUser =  async (req, res) => {
     try {
         const { id } = req.params
         const user = await UserModel.findById(id);
+        if (decoded.username !== user.username && decoded.role==="user") {
+            return res.send("you don't have access")
+        }
         res.json(user)
     } catch (error) {
         res.send(error.message);

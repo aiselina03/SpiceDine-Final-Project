@@ -56,7 +56,9 @@ function Basket() {
                       ></i>
                     </td>
                     <td>
+                      <Link to={"/shopDetail/"+x._id}>
                       <img src={x.image} alt="" />
+                      </Link>
                     </td>
                     <td>
                       <h2 className="name">{x.name}</h2>

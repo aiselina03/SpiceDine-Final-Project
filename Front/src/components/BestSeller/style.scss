@@ -5,7 +5,8 @@
   justify-content: center;
   margin: 50px auto;
   .bestContainer {
-    max-width: 100%; min-height: 90vh;
+    max-width: 100%;
+    min-height: 90vh;
     width: 100%;
     margin-bottom: 60px;
     display: flex;
@@ -204,5 +205,128 @@
   .fa-spin {
     font-size: 55px;
     color: #c7a97f;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .bestSeller {
+    .bestContainer {
+      min-height: auto;
+      .header {
+        h2 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 18px;
+          width: 290px;
+        }
+      }
+      .bestCards {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+        margin: 40px 0;
+        .bestCard {
+          width: 280px;
+          .image {
+            width: 280px;
+          }
+        }
+      }
+      .btn {
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+        margin-top: 25px;
+
+        .opacity {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .bestSeller {
+    .bestContainer {
+      min-height: auto;
+      .header {
+        h2 {
+          font-size: 29px;
+        }
+        p {
+          font-size: 19px;
+          width: 440px;
+        }
+      }
+      .bestCards {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+        margin: 40px 0;
+        .bestCard {
+          width: 440px;
+          .image {
+            width: 440px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .bestSeller {
+    .bestContainer {
+      min-height: auto;
+      .header {
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 20px;
+          width: 500px;
+        }
+      }
+      .bestCards {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 40px;
+        margin: 40px 0;
+        .bestCard {
+          width: 300px;
+          .image {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+  .bestSeller {
+    .bestContainer {
+      min-height: auto;
+      .header {
+        h2 {
+          font-size: 31px;
+        }
+        p {
+          font-size: 21px;
+          width: 550px;
+        }
+      }
+      .bestCards {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 40px;
+        margin: 40px 0;
+        .bestCard {
+          width: 460px;
+          .image {
+            width: 460px;
+          }
+        }
+      }
+    }
   }
 }

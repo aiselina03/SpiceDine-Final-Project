@@ -5,13 +5,14 @@ export const authMiddleware = function (roles) {
     try {
       let token = req.headers.authorization
       if (!token) {
-        res.status(403).send("You don't have token")
+        res.status(403).send("You don't have ")
       }
       if (!token.startsWith('Bearer')) {
         res.status(403).send("token is not vaid")
       }
       token = token.slice(7)
       const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY)
+      req.decoded=decoded
       if (!roles.includes(decoded.role)) {
         res.status(403).send("You don't have access")
       }

@@ -22,7 +22,6 @@ function Appointment() {
             <h2>BOOK A TABLE</h2>
             <p>
               Book a table to enjoy the luxury of food, music and service from
-              <br />
               brochette restaurant
             </p>
           </div>

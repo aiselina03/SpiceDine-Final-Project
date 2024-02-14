@@ -18,6 +18,11 @@ import SignUp from "./pages/SignUp";
 import AdminPanel from "./pages/AdminPanel";
 import ResetPassword from "./pages/ResetPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PrivateRoute from "./routes/PrivateRoute";
+import MenuPanel from "./components/MenuPanel";
+import UserPanel from "./components/UserPanel";
+
+
 
 function App() {
   return (
@@ -39,9 +44,13 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path="/resetPassword" element={<ResetPassword/>} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
-          <Route path="/adminPanel" element={<AdminPanel />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route element={<PrivateRoute roles={["admin"]} />}>
+            <Route path="/adminPanel" element={<AdminPanel />} />
+            <Route path="/menuPanel" element={<MenuPanel/>} />
+            <Route path="/userPanel" element={<UserPanel/>} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

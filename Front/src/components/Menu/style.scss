@@ -188,3 +188,401 @@
     color: #c7a97f;
   }
 }
+
+@media only screen and (min-width: 280px) and (max-width: 350px) {
+  .ourMenu {
+    min-height: auto;
+    .containerMenu {
+      display: grid;
+      grid-template-columns: auto;
+      .menuText {
+        width: 270px;
+        height: 600px;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        span {
+          font-size: 20px;
+        }
+        h2 {
+          font-size: 30px;
+          margin: 10px 0;
+        }
+        .text {
+          width: 290px;
+        }
+        .btn {
+          width: 150px;
+          height: 40px;
+          font-size: 12px;
+          &:hover {
+            .opacity {
+              width: 150px;
+              height: 40px;
+            }
+          }
+          .opacity {
+            height: 40px;
+          }
+        }
+      }
+      .menuView {
+        height: 620px;
+        width: 250px;
+        .view {
+          width: 250px;
+          height: auto;
+          .category {
+            width: 250px;
+            height: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            justify-content: center;
+            button {
+              padding: 10px;
+              font-size: 15px;
+            }
+          }
+          .menuList {
+            width: 280px;
+            height: 470px;
+            .product {
+              .head {
+                h2 {
+                  font-size: 15px;
+                }
+                p {
+                  margin: 5px 0;
+                  font-size: 12px;
+                }
+              }
+              .price {
+                p {
+                  font-size: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 351px) and (max-width: 480px) {
+  .ourMenu {
+    min-height: auto;
+    .containerMenu {
+      display: grid;
+      grid-template-columns: auto;
+      .menuText {
+        width: 330px;
+        height: auto;
+        margin: 40px 0;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        span {
+          font-size: 20px;
+        }
+        h2 {
+          font-size: 30px;
+          margin: 10px 0;
+        }
+        .text {
+          width: 330px;
+        }
+        .btn {
+          width: 150px;
+          height: 40px;
+          font-size: 12px;
+          &:hover {
+            .opacity {
+              width: 150px;
+              height: 40px;
+            }
+          }
+          .opacity {
+            height: 40px;
+          }
+        }
+      }
+      .menuView {
+        height: 620px;
+        width: 330px;
+        .view {
+          width: 330px;
+          height: auto;
+          .category {
+            width: 330px;
+            height: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            justify-content: center;
+            button {
+              padding: 10px;
+              font-size: 15px;
+            }
+          }
+          .menuList {
+            width: 330px;
+            height: 470px;
+            .product {
+              .head {
+                h2 {
+                  font-size: 18px;
+                }
+                p {
+                  margin: 5px 0;
+                  font-size: 14px;
+                }
+              }
+              .price {
+                p {
+                  font-size: 26px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .ourMenu {
+    min-height: auto;
+    .containerMenu {
+      display: grid;
+      grid-template-columns: auto;
+      .menuText {
+        width: 460px;
+        height: auto;
+        margin: 40px 0;
+        img {
+          width: 55px;
+          height: 55px;
+        }
+        span {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 32px;
+          margin: 10px 0;
+        }
+        .text {
+          width: 460px;
+        }
+        .btn {
+          width: 160px;
+          height: 45px;
+          font-size: 14px;
+          &:hover {
+            .opacity {
+              width: 160px;
+              height: 45px;
+            }
+          }
+          .opacity {
+            height: 45px;
+          }
+        }
+      }
+      .menuView {
+        height: 620px;
+        width: 460px;
+        .view {
+          width: 460px;
+          height: auto;
+          .category {
+            width: 460px;
+            height: 60px;
+            button {
+              padding: 10px;
+              font-size: 15px;
+            }
+          }
+          .menuList {
+            width: 460px;
+            height: 470px;
+            .product {
+              .head {
+                h2 {
+                  font-size: 19px;
+                }
+                p {
+                  margin: 5px 0;
+                  font-size: 15px;
+                }
+              }
+              .price {
+                p {
+                  font-size: 26px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .ourMenu {
+    min-height: auto;
+    .containerMenu {
+      display: grid;
+      grid-template-columns: auto;
+      .menuText {
+        width: 700px;
+        height: auto;
+        margin: 40px 0;
+        img {
+          width: 55px;
+          height: 55px;
+        }
+        span {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 32px;
+          margin: 10px 0;
+        }
+        .text {
+          width: 700px;
+        }
+        .btn {
+          width: 160px;
+          height: 45px;
+          font-size: 14px;
+          &:hover {
+            .opacity {
+              width: 160px;
+              height: 45px;
+            }
+          }
+          .opacity {
+            height: 45px;
+          }
+        }
+      }
+      .menuView {
+        height: 620px;
+        width: 680px;
+        .view {
+          width: 700px;
+          height: auto;
+          .category {
+            width: 700px;
+            height: 80px;
+            button {
+              padding: 10px;
+              font-size: 17px;
+            }
+          }
+          .menuList {
+            width: 700px;
+            height: 470px;
+            .product {
+              .head {
+                h2 {
+                  font-size: 19px;
+                }
+                p {
+                  margin: 5px 0;
+                  font-size: 15px;
+                }
+              }
+              .price {
+                p {
+                  font-size: 26px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1230px) {
+  .ourMenu {
+    min-height: auto;
+    .containerMenu {
+      display: grid;
+      grid-template-columns: auto;
+      .menuText {
+        width: 950px;
+        height: auto;
+        margin: 40px 0;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        span {
+          font-size: 23px;
+        }
+        h2 {
+          font-size: 35px;
+          margin: 15px 0;
+        }
+        .text {
+          width: 950px;
+        }
+        .btn {
+          width: 180px;
+          height: 50px;
+          font-size: 16px;
+          &:hover {
+            .opacity {
+              width: 180px;
+              height: 50px;
+            }
+          }
+          .opacity {
+            height: 50px;
+          }
+        }
+      }
+      .menuView {
+        height: 620px;
+        width: 920px;
+        .view {
+          width: 950px;
+          height: auto;
+          .category {
+            width: 950px;
+            height: 80px;
+            button {
+              padding: 10px;
+              font-size: 18px;
+            }
+          }
+          .menuList {
+            width: 950px;
+            height: 470px;
+            .product {
+              .head {
+                h2 {
+                  font-size: 20px;
+                }
+                p {
+                  margin: 5px 0;
+                  font-size: 16px;
+                }
+              }
+              .price {
+                p {
+                  font-size: 27px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

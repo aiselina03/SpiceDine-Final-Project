@@ -8,6 +8,7 @@ function UserProvider({ children }) {
   const [token, setToken] = useLocalStorage(null);
   const [decode, setDecode] = useLocalStorage(null);
 
+
   function addToken(token) {
     setToken(token);
     console.log(token);

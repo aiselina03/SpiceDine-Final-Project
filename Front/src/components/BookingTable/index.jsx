@@ -13,7 +13,7 @@ function BookingTable() {
             <h2>ONLINE BOOKING NOW</h2>
             <p>
               We invite you to make a reservation at our renowned restaurant,
-              where <br /> exceptional flavors, top-notch service, and a
+              where exceptional flavors, top-notch service, and a
               welcoming ambiance await you.
             </p>
           </div>

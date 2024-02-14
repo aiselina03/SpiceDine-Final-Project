@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { BasketContext } from "../../context/basketContext";
 import { WishlistContext } from "../../context/wishlistContext";
 
+
 function ShopCards() {
   const [products, setProducts] = useState([]);
   const [filterData, setFilterData] = useState("");
@@ -120,6 +121,7 @@ function ShopCards() {
                 <p>Showing all {currentProducts.length} results</p>
               </div>
               <div className="select">
+
                 <select
                   name="sortOptions"
                   className="sortOptions"
@@ -209,6 +211,7 @@ function ShopCards() {
                 )}
               </div>
             </div>
+
           </div>
         </div>
       </div>

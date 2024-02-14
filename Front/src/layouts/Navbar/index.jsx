@@ -4,6 +4,16 @@ import { NavLink, useLocation, useParams } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
 
 function Navbar() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenPages, setIsOpenPages] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+  const toggleNavbarPages = () => {
+    setIsOpenPages(!isOpenPages);
+  };
   const { id } = useParams();
   let location = useLocation();
   const [sticky, setSticky] = useState(false);
@@ -41,6 +51,10 @@ function Navbar() {
             : "" || location.pathname === "/privacyPolicy"
             ? "navbarBcgColor"
             : "" || location.pathname === "/adminPanel"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/menuPanel"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/userPanel"
             ? "navbarBcgColor"
             : ""
         }`}
@@ -133,6 +147,100 @@ function Navbar() {
             </NavLink>
           </div>
         </div>
+      </div>
+
+      <div className={`resNavbar ${
+          sticky === true
+            ? "sticky"
+            : ""|| location.pathname === `/shopDetail/${id}`
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/basket"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/wishlist"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/*"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/login"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/signUp"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/resetPassword"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/privacyPolicy"
+            ? "navbarBcgColor"
+            : "" || location.pathname === "/adminPanel"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/menuPanel"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/userPanel"
+            ? "navbarBcgColor"
+            : ""
+        }`}>
+        <div className="row">
+           <div className="bars" onClick={toggleNavbar}>
+        <i class="fa-solid fa-bars"></i>
+        </div>
+        <div className="logo">
+            <NavLink to={"/"}>
+              <img src="/src/images/logo.png" alt="" />
+            </NavLink>
+          </div>
+          <div className="icons">
+            <i className="fa-light fa-magnifying-glass"></i>
+            <NavLink to={"/wishlist"}>
+              <i className="fa-light fa-heart"></i>
+            </NavLink>
+            {decode ? (
+              <NavLink to={"/login"}>
+                <i className="fa-solid fa-user"></i>
+              </NavLink>
+            ) : (
+              <NavLink to={"/login"}>
+                <i className="fa-light fa-user"></i>
+              </NavLink>
+            )}
+
+            <NavLink to={"/basket"}>
+              <i className="fa-light fa-cart-shopping"></i>
+            </NavLink>
+          </div>
+        </div>
+        <div className={`resMenu ${isOpen ? "open" : ""}`}>
+            <ul>
+              <li>
+                <NavLink to={"/"}>HOME</NavLink>
+              </li>
+              <li className="pages">
+                <p>
+                  PAGES <i className="fa-sharp fa-light fa-chevron-down" onClick={toggleNavbarPages}></i>
+                </p>
+                <div className={`resMenus ${isOpenPages ? "openPages" : ""}`}>
+                  <NavLink to={"/chef"}>Chef</NavLink>
+                  <NavLink to={"/appointment"}>Appointment</NavLink>
+                  <NavLink to={"/services"}>Services</NavLink>
+                  <NavLink to={"/faq"}>FAQ</NavLink>
+                  <NavLink to={"*"}>Page 404</NavLink>
+                </div>
+              </li>
+              <li>
+                <NavLink to={"/about"}>ABOUT</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/menu"}>MENU</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/shop"}>SHOP</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/contact"}>CONTACT</NavLink>
+              </li>
+              {decode && decode.role === "admin" ? (
+                <li>
+                  <NavLink to={"/adminPanel"}>ADMIN PANEL</NavLink>
+                </li>
+              ) : null}
+            </ul>
+          </div>
       </div>
     </>
   );
