@@ -23,7 +23,6 @@ function Contact() {
             <h2>CONTACT US</h2>
             <p>
               If you have any questions or concerns, you can contact us in
-              <br />
               the following ways
             </p>
           </div>

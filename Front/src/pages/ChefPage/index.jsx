@@ -22,7 +22,6 @@ function ChefPage() {
             <h2>MEET OUR CHEF</h2>
             <p>
               Meet the world's top, award-winning professional chefs working
-              <br />
               in basilico restaurants
             </p>
           </div>

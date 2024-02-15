@@ -25,7 +25,7 @@ function Menu() {
             <h2>OUR MENU</h2>
             <p>
               Explore our menu with a wide range of Asian to European dishes,
-              dishes to suit <br /> all your tastes or events
+              dishes to suit all your tastes or events
             </p>
           </div>
         </div>

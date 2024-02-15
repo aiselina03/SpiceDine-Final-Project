@@ -26,8 +26,7 @@ function About() {
           <div className="headers">
             <h2>ABOUT US</h2>
             <p>
-              Need food and a good place to eat? Welcome to our humble place{" "}
-              <br /> where you can eat good food peacefully.
+              Need food and a good place to eat? Welcome to our humble place where you can eat good food peacefully.
             </p>
           </div>
         </div>

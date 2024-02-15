@@ -4,20 +4,20 @@ import { NavLink, useLocation, useParams } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
 
 function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenPages, setIsOpenPages] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-  const toggleNavbarPages = () => {
-    setIsOpenPages(!isOpenPages);
-  };
   const { id } = useParams();
   let location = useLocation();
   const [sticky, setSticky] = useState(false);
   const { decode } = useContext(UserContext);
+
+  function  toggleNavbar () {
+    setIsOpen(!isOpen);
+  };
+
+  function  toggleNavbarPages() {
+    setIsOpenPages(!isOpenPages);
+  };
 
   function stickyNavbar() {
     if (window.scrollY >= 500) {

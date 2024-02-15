@@ -19,7 +19,8 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    .headers {margin-top: 80px;
+    .headers {
+      margin-top: 80px;
       h2 {
         font-size: 65px;
         font-family: "Cormorant", serif;
@@ -28,10 +29,88 @@
         margin: 15px 0;
       }
       p {
+        width: 600px;
         color: #cdc5b9;
         font-size: 20px;
         line-height: 40px;
         font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .aboutPage {
+    .aboutUs {
+      width: 100%;
+      height: 50vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 35px;
+        }
+        p {
+          width: 260px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .aboutPage {
+    .aboutUs {
+      width: 100%;
+      height: 55vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 37px;
+        }
+        p {
+          width: 460px;
+          font-size: 17px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .aboutPage {
+    .aboutUs {
+      width: 100%;
+      height: 55vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 38px;
+        }
+        p {
+          width: 600px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1100px) {
+  .aboutPage {
+    .aboutUs {
+      width: 100%;
+      height: 60vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 40px;
+        }
+        p {
+          width: 700px;
+          font-size: 19px;
+          line-height: 25px;
+        }
       }
     }
   }
