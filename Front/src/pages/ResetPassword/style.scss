@@ -74,3 +74,43 @@
     }
   }
 }
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .resetPasswordPage {
+    .resetPassword {
+      .resetContent {
+        width: 280px;
+        .form {
+          .input {
+            .field {
+              width: 250px;
+            }
+          }
+          button {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .resetPasswordPage {
+    .resetPassword {
+      .resetContent {
+        width: 450px;
+        .form {
+          .input {
+            .field {
+              width: 420px;
+            }
+          }
+          button {
+            width: 420px;
+          }
+        }
+      }
+    }
+  }
+}
+

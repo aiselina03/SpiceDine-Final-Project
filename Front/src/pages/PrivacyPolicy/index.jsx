@@ -18,11 +18,6 @@ function PrivacyPolicy() {
       </div>
       <div className="privacyPolicy">
         <div className="privacy">
-          <h2>Who we are</h2>
-          <p>
-            Suggested text: Our website address is:
-            https://wordpress.templatetrip.com/WPTM01/WPTM004_spicedine.
-          </p>
           <h2>Comments</h2>
           <p>
             Suggested text: When visitors leave comments on the site we collect

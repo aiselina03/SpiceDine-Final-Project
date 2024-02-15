@@ -169,3 +169,93 @@
     }
   }
 }
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .signUpPage {
+    .signUp {
+      min-height: auto;
+      .signUpContent {
+        width: 280px;
+        height: auto;
+        .form {
+          .input {
+            .field {
+              width: 250px !important;
+            }
+          }
+          .input2 {
+            .fields {
+              width: 250px !important;
+              .field {
+                width: 250px !important;
+              }
+            }
+          }
+          button {
+            width: 250px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .signUpPage {
+    .signUp {
+      min-height: auto;
+      .signUpContent {
+        width: 450px;
+        height: auto;
+        .form {
+          .input {
+            .field {
+              width: 420px !important;
+            }
+          }
+          .input2 {
+            .fields {
+              width: 420px !important;
+              .field {
+                width: 420px !important;
+              }
+            }
+          }
+          button {
+            width: 420px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .signUpPage {
+    .signUp {
+      min-height: auto;
+      .signUpContent {
+        width: 720px;
+        height: auto;
+        .form {
+          .input {
+            .field {
+              width: 690px !important;
+            }
+          }
+          .input2 {
+            .fields {
+              width: 690px !important;
+              .field {
+                width: 690px !important;
+              }
+            }
+          }
+          button {
+            width: 690px !important;
+          }
+        }
+      }
+    }
+  }
+}

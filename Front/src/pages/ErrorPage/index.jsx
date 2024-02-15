@@ -18,7 +18,6 @@ function ErrorPage() {
         <h2>Oops! This Page is Not Found.</h2>
         <p>
           Sorry for the inconvenience. Go to our homepage or check out our
-          <br />
           latest solution for your finance and insurance needs.
         </p>
         <Link to={"/"}>

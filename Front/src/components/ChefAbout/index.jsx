@@ -39,7 +39,7 @@ function ChefMaster() {
               responsibilities. Offer a certificate, a small trophy, or a gift
               card as a reward.
             </p>
-            <p>
+            <p className="paragraf">
               I like the idea of being so passionate about everything I do and
               the fact that I might wake up tomorrow and say 'I want to be a
               chef,' and just pour myself into that.

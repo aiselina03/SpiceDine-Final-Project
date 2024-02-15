@@ -188,3 +188,205 @@
     }
   }
 }
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .basketPage {
+    .basket {
+      min-height: auto;
+      .table {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        table {
+          thead {
+            tr {
+              th {
+                display: none;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                display: list-item;
+                img {
+                  width: 130px;
+                }
+              }
+            }
+          }
+
+          tfoot {
+            tr {
+              td {
+                .column {
+                  display: flex;
+                  align-items: start;
+                  justify-content: center;
+                  flex-direction: column;
+                  input {
+                    width: 180px;
+                  }
+                  button {
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .checkout {
+          width: 280px;
+          .subTotal {
+            p {
+              font-size: 23px;
+            }
+          }
+          .cardTotal {
+            p {
+              font-size: 23px;
+            }
+          }
+          button {
+            width: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .basketPage {
+    .basket {
+      min-height: auto;
+      .table {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        table {
+          thead {
+            tr {
+              th {
+                display: none;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                display: list-item;
+                img {
+                  width: 130px;
+                }
+              }
+            }
+          }
+
+          tfoot {
+            tr {
+              td {
+                .column {
+                  display: flex;
+                  align-items: start;
+                  justify-content: center;
+                  flex-direction: column;
+                  button {
+                    margin-top: 10px;
+                    font-size: 15px;
+                    width: 180px;
+                    height: 45px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .checkout {
+          width: 450px;
+          .subTotal {
+            p {
+              font-size: 23px;
+            }
+          }
+          .cardTotal {
+            p {
+              font-size: 23px;
+            }
+          }
+          button {
+            width: 390px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 950px) {
+  .basketPage {
+    .basket {
+      min-height: auto;
+      .table {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        table {
+          thead {
+            tr {
+              th {
+                display: none;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                display: list-item;
+                img {
+                  width: 130px;
+                }
+              }
+            }
+          }
+
+          tfoot {
+            tr {
+              td {
+                .column {
+                  display: flex;
+                  align-items: start;
+                  justify-content: center;
+                  button {
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    font-size: 15px;
+                    width: 180px;
+                    height: 45px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .checkout {
+          width: 700px;
+          .subTotal {
+            p {
+              font-size: 25px;
+            }
+          }
+          .cardTotal {
+            p {
+              font-size: 25px;
+            }
+          }
+          button {
+            width: 630px;
+          }
+        }
+      }
+    }
+  }
+}

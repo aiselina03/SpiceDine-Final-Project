@@ -61,7 +61,6 @@
               color: #a5a099;
               border: 1px solid #ffffff33;
               text-align: center;
-              font-size: 17px;
               .fa-sharp {
                 color: #c7a97f;
                 font-size: 18px;
@@ -102,6 +101,42 @@
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+  .wishlistPage {
+    .wishlist {
+      min-height: auto;
+      .table {
+        table {
+          thead {
+            tr {
+              th {
+                display: none;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                display: list-item;
+                img {
+                  width: 130px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 1025px) {
+  .wishlistPage {
+    .wishlist {
+      min-height: 30vh;
     }
   }
 }

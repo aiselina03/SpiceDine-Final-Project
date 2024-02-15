@@ -24,6 +24,7 @@
     color: #cdc5b9;
     font-size: 17px;
     font-family: "Roboto", sans-serif;
+    width: 600px;
   }
   .btn {
     display: flex;
@@ -41,6 +42,35 @@
       color: white;
     }
   }
-
 }
 
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .errorPage {
+    min-height: 75vh;
+    h1 {
+      font-size: 100px;
+    }
+    h2 {
+      font-size: 23px;
+    }
+    p {
+      width: 280px;
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .errorPage {
+    min-height: 75vh;
+    h1 {
+      font-size: 110px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      width: 400px;
+      font-size: 15px;
+    }
+  }
+}
