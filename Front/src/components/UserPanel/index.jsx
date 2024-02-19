@@ -1,10 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/userContext";
-import useLocalStorage from "../../hook/useLocalStorage";
 import Mode from "../Mode";
 
 function UserPanel() {
-  // const [users, setUsers] = useLocalStorage("users", []);
   const [users, setUsers] = useState([]);
   const { decode, token } = useContext(UserContext);
 
@@ -12,8 +10,6 @@ function UserPanel() {
     getAll();
   }, []);
 
-
-  // refreshde silinir
   async function getAll() {
     const data = await fetch("http://localhost:3000/api/users", {
       headers: {

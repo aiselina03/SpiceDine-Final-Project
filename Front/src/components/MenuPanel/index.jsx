@@ -10,17 +10,12 @@ function MenuPanel() {
   const [categoryName, setcategoryName] = useState("");
   const [ingredient, setingredient] = useState("");
   const [description, setdescription] = useState("");
-  const { token } = useContext(UserContext);
+  const { token, decode } = useContext(UserContext);
 
   useEffect(() => {
     getAll();
   }, []);
 
-  // function getAll() {
-  //   fetch("http://localhost:3000/api/menu/")
-  //     .then((res) => res.json())
-  //     .then((data) => setProducts(data));
-  // }
 
   function getAll() {
     fetch("http://localhost:3000/menuWithCategory")
@@ -47,36 +42,21 @@ function MenuPanel() {
     });
     getAll();
     console.log(data);
-    // .then((data) => {
-
-    // })
-    // .catch((error) => console.log(error));
-
-    // fetch("http://localhost:3000/menuWithCategory/", {
-    //   method: "Post",
-    //   body: formData,
-    // })
-    //   .then(() => console.log("gonderildi"))
-    //   .then((data) => {
-    //     getAll();
-    //   });
   }
 
-  // function deleteById(id) {
-  //  fetch("http://localhost:3000/api/menu/"+id, {method: "DELETE"})
-  //     .then(() => console.log("gonderildi"))
-  //     .then((data) => {
-  //       getAll();
-  //     })
-  // }
-
-  function deleteById(id) {
-    fetch("http://localhost:3000/menuWithCategory/" + id, { method: "DELETE" })
-      .then(() => console.log("gonderildi"))
-      .then((data) => {
-        getAll();
+  async function deleteById(id) {
+    if (decode && decode.role === "admin") {
+      await fetch(`http://localhost:3000/api/menu/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
       });
+      await getAll();
+    }
   }
+
 
   return (
     <>
@@ -96,11 +76,11 @@ function MenuPanel() {
             onChange={(e) => setprice(e.target.value)}
           />
           <br />
-          <input
+          {/* <input
             type="text"
             placeholder="category"
             onChange={(e) => setcategoryName(e.target.value)}
-          />
+          /> */}
           <br />
           <input
             type="text"
@@ -122,7 +102,7 @@ function MenuPanel() {
               <th>image</th>
               <th>name</th>
               <th>price</th>
-              <th>category</th>
+              {/* <th>category</th> */}
               <th>ingredient</th>
               <th>description</th>
               <th>update</th>
@@ -138,7 +118,7 @@ function MenuPanel() {
                   </td>
                   <td>{x.name}</td>
                   <td>${x.price}</td>
-                  <td>{x.categoryId.categoryName}</td> {/* !!!! */}
+                  {/* <td>{x.categoryId.categoryName}</td>  */}
                   <td>{x.ingredient}</td>
                   <td>{x.description}</td>
                   <td>
