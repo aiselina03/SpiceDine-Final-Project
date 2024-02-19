@@ -1,26 +1,34 @@
-import React, { useContext, useEffect, useState } from "react";
-import Mode from "../Mode";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import Scroll from "../../components/Scroll";
+import Mode from "../../components/Mode";
+import Cursor from "../../components/Cursor";
 import { UserContext } from "../../context/userContext";
+import "./style.scss";
+import { Link } from "react-router-dom";
 
 function MenuPanel() {
   const [products, setProducts] = useState([]);
-  const [image, setimage] = useState("");
-  const [name, setname] = useState("");
-  const [price, setprice] = useState("");
-  const [categoryName, setcategoryName] = useState("");
-  const [ingredient, setingredient] = useState("");
-  const [description, setdescription] = useState("");
+  const [image, setImage] = useState("");
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [categoryName, setCategoryName] = useState("");
+  const [ingredient, setIngredient] = useState("");
+  const [description, setDescription] = useState("");
   const { token, decode } = useContext(UserContext);
+  const [isLoading, setIsLoading] = useState(true);
+  const myFileInput = useRef();
 
   useEffect(() => {
     getAll();
   }, []);
 
-
   function getAll() {
     fetch("http://localhost:3000/menuWithCategory")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+         setIsLoading(false);
+      });
   }
 
   async function handleSubmit(e) {
@@ -29,7 +37,7 @@ function MenuPanel() {
     formData.append("image", image);
     formData.append("name", name);
     formData.append("price", price);
-    formData.append("category", categoryName);
+    formData.append("categoryId", categoryName);
     formData.append("ingredient", ingredient);
     formData.append("description", description);
 
@@ -41,7 +49,6 @@ function MenuPanel() {
       body: formData,
     });
     getAll();
-    console.log(data);
   }
 
   async function deleteById(id) {
@@ -57,82 +64,114 @@ function MenuPanel() {
     }
   }
 
-
   return (
     <>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type="file" onChange={(e) => setimage(e.target.files[0])} />
-          <br />
+      <div className="account">
+        <p>
+          <Link to={"/adminPanel"}>
+            <i className="fa-solid fa-house"></i>
+          </Link>
+          Menu Panel
+        </p>
+      </div>
+      <div className="menuPanel">
+        <form onSubmit={handleSubmit} className="form">
+          <input
+            type="file"
+            onChange={(e) => setImage(e.target.files[0])}
+            ref={myFileInput}
+            className="noneInput"
+          />
+
+          <div
+            className="upload"
+            onClick={() => {
+              myFileInput.current.click();
+            }}
+          >
+            <i className="fa-solid fa-upload"></i> <span>Add Image</span>
+          </div>
+
           <input
             type="text"
-            placeholder="name"
-            onChange={(e) => setname(e.target.value)}
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
           />
-          <br />
+
           <input
             type="text"
-            placeholder="price"
-            onChange={(e) => setprice(e.target.value)}
+            placeholder="Price"
+            onChange={(e) => setPrice(e.target.value)}
           />
-          <br />
-          {/* <input
-            type="text"
-            placeholder="category"
-            onChange={(e) => setcategoryName(e.target.value)}
-          /> */}
-          <br />
+
           <input
             type="text"
-            placeholder="ingredient"
-            onChange={(e) => setingredient(e.target.value)}
+            placeholder="Category"
+            onChange={(e) => setCategoryName(e.target.value)}
           />
-          <br />
+
           <input
             type="text"
-            placeholder="description"
-            onChange={(e) => setdescription(e.target.value)}
+            placeholder="Ingredient"
+            onChange={(e) => setIngredient(e.target.value)}
           />
-          <br />
-          <button>add</button>
+
+          <input
+            type="text"
+            placeholder="Description"
+            onChange={(e) => setDescription(e.target.value)}
+          />
+
+          <button>Add Product</button>
         </form>
-        <table border={"1px solid gray"}>
-          <thead>
-            <tr>
-              <th>image</th>
-              <th>name</th>
-              <th>price</th>
-              {/* <th>category</th> */}
-              <th>ingredient</th>
-              <th>description</th>
-              <th>update</th>
-              <th>delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {products &&
-              products.map((x) => (
-                <tr key={x._id}>
-                  <td>
-                    <img src={x.image} alt="" width={120} />
-                  </td>
-                  <td>{x.name}</td>
-                  <td>${x.price}</td>
-                  {/* <td>{x.categoryId.categoryName}</td>  */}
-                  <td>{x.ingredient}</td>
-                  <td>{x.description}</td>
-                  <td>
-                    <button>update</button>
-                  </td>
-                  <td>
-                    <button onClick={() => deleteById(x._id)}>delete</button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+        <div className="table">
+        {isLoading ? (
+              <div className="loaderCenterCards">
+                <div className="loader">
+                  <i className="fa-solid fa-spinner fa-spin"></i>
+                </div>
+              </div>
+            ) : (
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>CategoryName</th>
+                <th>Ingredient</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products &&
+                products.map((x) => (
+                  <tr key={x._id}>
+                    <td>
+                      <img src={x.image} alt="" />
+                    </td>
+                    <td>{x.name}</td>
+                    <td>${x.price}</td>
+                    <td>{x.categoryId?.categoryName}</td>
+                    <td>{x.ingredient}</td>
+                    <td>{x.description}</td>
+                    <td>
+                      <button>Update</button>
+                    </td>
+                    <td>
+                      <button onClick={() => deleteById(x._id)}>Delete</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>)}
+        </div>
       </div>
       <Mode />
+      <Scroll />
+      <Cursor />
     </>
   );
 }

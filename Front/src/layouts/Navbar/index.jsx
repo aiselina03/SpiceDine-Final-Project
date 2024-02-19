@@ -178,7 +178,7 @@ function Navbar() {
         }`}>
         <div className="row">
            <div className="bars" onClick={toggleNavbar}>
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
         </div>
         <div className="logo">
             <NavLink to={"/"}>
@@ -219,6 +219,11 @@ function Navbar() {
                   <NavLink to={"/appointment"}>Appointment</NavLink>
                   <NavLink to={"/services"}>Services</NavLink>
                   <NavLink to={"/faq"}>FAQ</NavLink>
+                  {decode && decode.role === "admin" ? (
+                
+                  <NavLink to={"/adminPanel"}>Admin Panel</NavLink>
+              
+              ) : null}
                   <NavLink to={"*"}>Page 404</NavLink>
                 </div>
               </li>
@@ -234,11 +239,7 @@ function Navbar() {
               <li>
                 <NavLink to={"/contact"}>CONTACT</NavLink>
               </li>
-              {decode && decode.role === "admin" ? (
-                <li>
-                  <NavLink to={"/adminPanel"}>ADMIN PANEL</NavLink>
-                </li>
-              ) : null}
+             
             </ul>
           </div>
       </div>

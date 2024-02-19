@@ -1,10 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/userContext";
-import Mode from "../Mode";
+import Scroll from "../../components/Scroll";
+import Mode from "../../components/Mode";
+import Cursor from "../../components/Cursor";
+import "./style.scss";
+import { Link } from "react-router-dom";
 
 function UserPanel() {
   const [users, setUsers] = useState([]);
   const { decode, token } = useContext(UserContext);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getAll();
@@ -19,6 +24,7 @@ function UserPanel() {
     });
     const res = await data.json();
     setUsers(res);
+    setIsLoading(false);
   }
 
   async function deleteUser(id) {
@@ -31,44 +37,63 @@ function UserPanel() {
         },
       });
       await getAll();
-      console.log(decode.role);
-      console.log(token);
     }
   }
 
-  
   return (
     <>
-      <table border={"1px solid gray"}>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>username</th>
-            <th>email</th>
-            <th>role</th>
-            <th>update</th>
-            <th>delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users &&
-            users.map((x) => (
-              <tr key={x._id}>
-                <th>{x._id}</th>
-                <td>{x.username}</td>
-                <td>{x.email}</td>
-                <td>{x.role}</td>
-                <td>
-                  <button>update</button>
-                </td>
-                <td>
-                  <button onClick={() => deleteUser(x._id)}>delete</button>
-                </td>
+       <div className="account">
+        <p>
+          <Link to={"/adminPanel"}>
+            <i className="fa-solid fa-house"></i>
+          </Link>
+         User Panel
+        </p>
+      </div>
+      <div className="userPanel">
+        <div className="table">
+        {isLoading ? (
+              <div className="loaderCenterCards">
+                <div className="loader">
+                  <i className="fa-solid fa-spinner fa-spin"></i>
+                </div>
+              </div>
+            ) : (
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Update</th>
+                <th>Delete</th>
               </tr>
-            ))}
-        </tbody>
-      </table>
+            </thead>
+            <tbody>
+              {users &&
+                users.map((x) => (
+                  <tr key={x._id}>
+                    <th>{x._id}</th>
+                    <td>{x.username}</td>
+                    <td>{x.email}</td>
+                    <td>{x.role}</td>
+                    <td>
+                      <button>update</button>
+                    </td>
+                    <td>
+                      <button onClick={() => deleteUser(x._id)}>delete</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>)}
+        </div>
+      </div>
+
       <Mode />
+      <Scroll />
+      <Cursor />
     </>
   );
 }

@@ -57,7 +57,7 @@ function Menu() {
             ) : (
               <div className="menuList">
                 {products
-                  .filter((x) => x.categoryId.categoryName.includes(filterData))
+                  .filter((x) => x.categoryId?.categoryName?.includes(filterData))
                   .map((x) => (
                       <div className="product" key={x._id}>
                         <div className="head">
