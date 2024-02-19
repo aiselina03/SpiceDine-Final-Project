@@ -16,6 +16,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.16",
     "aos": "^2.3.4",
     "formik": "^2.4.5",
+    "js-cookie": "^3.0.5",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",

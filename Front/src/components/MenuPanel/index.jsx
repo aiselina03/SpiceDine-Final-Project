@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Mode from "../Mode";
+import { UserContext } from "../../context/userContext";
 
 function MenuPanel() {
   const [products, setProducts] = useState([]);
@@ -9,10 +10,17 @@ function MenuPanel() {
   const [categoryName, setcategoryName] = useState("");
   const [ingredient, setingredient] = useState("");
   const [description, setdescription] = useState("");
+  const { token } = useContext(UserContext);
 
   useEffect(() => {
     getAll();
   }, []);
+
+  // function getAll() {
+  //   fetch("http://localhost:3000/api/menu/")
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data));
+  // }
 
   function getAll() {
     fetch("http://localhost:3000/menuWithCategory")
@@ -20,7 +28,7 @@ function MenuPanel() {
       .then((data) => setProducts(data));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
     formData.append("image", image);
@@ -30,16 +38,45 @@ function MenuPanel() {
     formData.append("ingredient", ingredient);
     formData.append("description", description);
 
-    fetch("http://localhost:3000/menuWithCategory/", {
-      method: "Post",
+    const data = await fetch("http://localhost:3000/api/menu/", {
+      method: "post",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
       body: formData,
-    })
+    });
+    getAll();
+    console.log(data);
+    // .then((data) => {
+
+    // })
+    // .catch((error) => console.log(error));
+
+    // fetch("http://localhost:3000/menuWithCategory/", {
+    //   method: "Post",
+    //   body: formData,
+    // })
+    //   .then(() => console.log("gonderildi"))
+    //   .then((data) => {
+    //     getAll();
+    //   });
+  }
+
+  // function deleteById(id) {
+  //  fetch("http://localhost:3000/api/menu/"+id, {method: "DELETE"})
+  //     .then(() => console.log("gonderildi"))
+  //     .then((data) => {
+  //       getAll();
+  //     })
+  // }
+
+  function deleteById(id) {
+    fetch("http://localhost:3000/menuWithCategory/" + id, { method: "DELETE" })
       .then(() => console.log("gonderildi"))
       .then((data) => {
         getAll();
       });
   }
-
 
   return (
     <>
@@ -101,14 +138,14 @@ function MenuPanel() {
                   </td>
                   <td>{x.name}</td>
                   <td>${x.price}</td>
-                  <td>{x.categoryId.categoryName}</td>
+                  <td>{x.categoryId.categoryName}</td> {/* !!!! */}
                   <td>{x.ingredient}</td>
                   <td>{x.description}</td>
                   <td>
                     <button>update</button>
                   </td>
                   <td>
-                    <button>delete</button>
+                    <button onClick={() => deleteById(x._id)}>delete</button>
                   </td>
                 </tr>
               ))}
