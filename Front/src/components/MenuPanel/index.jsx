@@ -82,7 +82,6 @@ function MenuPanel() {
             ref={myFileInput}
             className="noneInput"
           />
-
           <div
             className="upload"
             onClick={() => {
@@ -158,7 +157,7 @@ function MenuPanel() {
                     <td>{x.ingredient}</td>
                     <td>{x.description}</td>
                     <td>
-                      <button>Update</button>
+                    <Link to={`/menuEditPanel/${x._id}`}><button>Update</button></Link>
                     </td>
                     <td>
                       <button onClick={() => deleteById(x._id)}>Delete</button>

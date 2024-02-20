@@ -21,10 +21,17 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivateRoute from "./routes/PrivateRoute";
 import MenuPanel from "./components/MenuPanel";
 import UserPanel from "./components/UserPanel";
+import MenuEditpanel from "./components/MenuUpdatePanel";
+import UserEditPanel from "./components/UserUpdatePanel";
+import Account from "./pages/Account";
+import Order from "./pages/Orders";
+import AccountDetails from "./pages/AccountDetails";
+import Addresses from "./pages/Adresses";
 
 
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -42,14 +49,20 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/order" element={<Order/>} />
+          <Route path="/accountDetails" element={<AccountDetails/>} />
+          <Route path="/adresses" element={<Addresses/>} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/resetPassword" element={<ResetPassword />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
           <Route element={<PrivateRoute roles={["admin"]} />}>
             <Route path="/adminPanel" element={<AdminPanel />} />
-            <Route path="/menuPanel" element={<MenuPanel/>} />
-            <Route path="/userPanel" element={<UserPanel/>} />
+            <Route path="/menuPanel" element={<MenuPanel />} />
+            <Route path="/userPanel" element={<UserPanel />} />
+            <Route path="/userEditPanel/:id" element={<UserEditPanel />} />
+            <Route path="/menuEditPanel/:id" element={<MenuEditpanel />} />
           </Route>
         </Route>
       </Routes>

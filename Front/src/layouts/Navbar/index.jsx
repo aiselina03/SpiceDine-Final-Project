@@ -56,6 +56,18 @@ function Navbar() {
             ? "navbarBcgColor"
             : ""|| location.pathname === "/userPanel"
             ? "navbarBcgColor"
+            : ""|| location.pathname === `/userEditPanel/${id}`
+            ? "navbarBcgColor"
+            : ""|| location.pathname === `/menuEditPanel/${id}`
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/account"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/order"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/accountDetails"
+            ? "navbarBcgColor"
+            : ""|| location.pathname === "/adresses"
+            ? "navbarBcgColor"
             : ""
         }`}
       >

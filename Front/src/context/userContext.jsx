@@ -30,6 +30,7 @@ function UserProvider({ children }) {
     setToken(null);
     Cookies.remove('token')
     setDecode(null);
+    window.location.href = "/login"
   }
 
   const data = {

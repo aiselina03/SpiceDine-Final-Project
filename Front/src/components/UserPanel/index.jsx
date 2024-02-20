@@ -79,10 +79,10 @@ function UserPanel() {
                     <td>{x.email}</td>
                     <td>{x.role}</td>
                     <td>
-                      <button>update</button>
+                      <Link to={`/userEditPanel/${x._id}`}><button>Update</button></Link>
                     </td>
                     <td>
-                      <button onClick={() => deleteUser(x._id)}>delete</button>
+                      <button onClick={() => deleteUser(x._id)}>Delete</button>
                     </td>
                   </tr>
                 ))}

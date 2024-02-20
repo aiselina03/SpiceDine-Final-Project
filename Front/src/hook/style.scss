@@ -883,4 +883,54 @@ body {
       }
     }
   }
+  .menuPanel {
+    .table {
+      table {
+        border: 1px solid var(--main-search-basket-table-color);
+        tr {
+          th {
+            border: 1px solid var(--main-search-basket-table-color);
+            color: var(--main-basket-p-color);
+          }
+        }
+        td {
+          color: var(--main-basket-p-color);
+          border: 1px solid var(--main-search-basket-table-color);
+        }
+      }
+    }
+  }
+  .userPanel {
+    .table {
+      table {
+        border: 1px solid var(--main-search-basket-table-color);
+        tr {
+          th {
+            border: 1px solid var(--main-search-basket-table-color);
+            color: var(--main-basket-p-color);
+          }
+        }
+        td {
+          color: var(--main-basket-p-color);
+          border: 1px solid var(--main-search-basket-table-color);
+        }
+      }
+    }
+  }
+  .menuUpdatePanel {
+    .form {
+      input {
+        color: var(--main-field-text-color);
+      }
+    }
+  }
+  .userUpdatePanel {
+    .form {
+      input {
+        color: var(--main-field-text-color);
+      }
+    
+    }
+
+  }
 }

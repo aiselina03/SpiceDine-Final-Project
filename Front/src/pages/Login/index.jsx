@@ -4,10 +4,11 @@ import React, { useContext, useState } from "react";
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "./style.scss";
 import { UserContext } from "../../context/userContext";
-import Account from "../../components/Account";
+
+
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -45,7 +46,7 @@ function LoginPage() {
         <div className="login">
           {decode ? (
             <>
-            <Account/>
+          <Navigate to={"/account"}></Navigate>
             </>
           ) : (
             <div className="loginContent">
@@ -126,7 +127,7 @@ function LoginPage() {
                 </p>
               </div>
             </div>
-          )}
+           )} 
         </div>
       </div>
       <Mode />

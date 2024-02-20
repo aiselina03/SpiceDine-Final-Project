@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
-import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 
@@ -26,7 +25,6 @@ function AdminPanel() {
       </div>
       
       <Mode />
-      <Scroll />
       <Cursor />
     </>
   );
