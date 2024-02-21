@@ -20,25 +20,26 @@ function HomeChef() {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]}
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <div className="homeChef">
@@ -54,94 +55,90 @@ function HomeChef() {
             </p>
           </div>
           <div className="chefs">
-          <Slider {...settings}>
-       
-        <div>
-       <div className="chef">
-              <div className="chefImage">
-                <img src="/src/images/chef02.jpg" alt="" />
-                <div className="brandsHover">
-                  <a href="https://www.facebook.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.youtube.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="https://twitter.com/?lang=en">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="https://az.linkedin.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
+            <Slider {...settings}>
+              <div>
+                <div className="chef">
+                  <div className="chefImage">
+                    <img src="/src/images/chef02.jpg" alt="" />
+                    <div className="brandsHover">
+                      <a href="https://www.facebook.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.youtube.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-youtube"></i>
+                      </a>
+                      <a href="https://twitter.com/?lang=en">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-twitter"></i>
+                      </a>
+                      <a href="https://az.linkedin.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <p>-Restaurant Manager-</p>
+                  <h2>Emily Johnson</h2>
                 </div>
               </div>
-              <p>-Restaurant Manager-</p>
-              <h2>Emily Johnson</h2>
-            </div>
-        </div>
-        <div>
-           <div className="chef">
-              <div className="chefImage">
-                <img src="/src/images/chef01.jpg" alt="" />
-                <div className="brandsHover">
-                  <a href="https://www.facebook.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.youtube.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="https://twitter.com/?lang=en">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="https://az.linkedin.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
+              <div>
+                <div className="chef">
+                  <div className="chefImage">
+                    <img src="/src/images/chef01.jpg" alt="" />
+                    <div className="brandsHover">
+                      <a href="https://www.facebook.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.youtube.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-youtube"></i>
+                      </a>
+                      <a href="https://twitter.com/?lang=en">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-twitter"></i>
+                      </a>
+                      <a href="https://az.linkedin.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <p>-Head Waiter-</p>
+                  <h2>Michael Chang</h2>
                 </div>
               </div>
-              <p>-Head Waiter-</p>
-              <h2>Michael Chang</h2>
-            </div>
-        </div>
-       
-        <div>
-          <div className="chef">
-              <div className="chefImage">
-                <img src="/src/images/chef03.jpg" alt="" />
-                <div className="brandsHover">
-                  <a href="https://www.facebook.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.youtube.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="https://twitter.com/?lang=en">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="https://az.linkedin.com/">
-                    <div className="hover"></div>
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
+
+              <div>
+                <div className="chef">
+                  <div className="chefImage">
+                    <img src="/src/images/chef03.jpg" alt="" />
+                    <div className="brandsHover">
+                      <a href="https://www.facebook.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.youtube.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-youtube"></i>
+                      </a>
+                      <a href="https://twitter.com/?lang=en">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-twitter"></i>
+                      </a>
+                      <a href="https://az.linkedin.com/">
+                        <div className="hover"></div>
+                        <i className="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <p>-Head Chef-</p>
+                  <h2>John Anderson</h2>
                 </div>
               </div>
-              <p>-Head Chef-</p>
-              <h2>John Anderson</h2>
-            </div>
-        </div>
-      </Slider>
-          
-         
-           
+            </Slider>
           </div>
         </div>
       </div>

@@ -77,3 +77,105 @@
     }
   }
 }
+
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .videoAbout {
+    height: 35vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 100px;
+        height: 100px;
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .videoAbout {
+    height: 45vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 120px;
+        height: 120px;
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .videoAbout {
+    height: 55vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 140px;
+        height: 140px;
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1450px) {
+  .videoAbout {
+    height: 60vh;
+    &:hover {
+      animation-fill-mode: none;
+      background-origin: center;
+      animation: none;
+    }
+
+    .play {
+      &:hover {
+        .border {
+          transform: none;
+        }
+      }
+      .border {
+        width: 150px;
+        height: 150px;
+        h2 {
+          font-size: 29px;
+        }
+      }
+    }
+  }
+}

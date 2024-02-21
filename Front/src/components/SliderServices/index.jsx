@@ -1,17 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./style.scss";
 
-function AboutSlider() {
+function SliderServices() {
   const settings = {
     dots: true,
     className: "center",
     centerMode: true,
     infinite: true,
-    slidesToShow: 1,
     centerPadding: "400px",
+    slidesToShow: 1,
     speed: 500,
     responsive: [
       {
@@ -63,22 +61,31 @@ function AboutSlider() {
     ],
   };
   return (
-    <>
-      <div className="aboutSlider">
-        <Slider {...settings}>
-          <div className="photo">
-            <img src="/src/images/about-slider-1.jpg" alt="" />
-          </div>
-          <div className="photo">
-            <img src="/src/images/about-slider-2.jpg" alt="" />
-          </div>
-          <div className="photo">
-            <img src="/src/images/about-slider-3.jpg" alt="" />
-          </div>
-        </Slider>
+    <div className="servicesP">
+      <div className="service">
+        <div className="header">
+          <img src="/src/images/sepreter.png" alt="" />
+          <h2>YOUR PRIVATE EVENT</h2>
+          <p>
+          Whether you're hosting a corporate event, cocktail party, luncheon, dinner, meeting, shower, wedding reception, bat/bar mitzvah or rehearsal dinner, we know we can offer you and your guests a truly memorable event. We have a variety of private event spaces that can accommodate up to 180 guests.
+          </p>
+        </div>
+        <div className="sliderServices">
+          <Slider {...settings}>
+            <div className="photos">
+              <img src="/src/images/service-slider-1.jpg" alt="" />
+            </div>
+            <div className="photos">
+              <img src="/src/images/service-slider-2.jpg" alt="" />
+            </div>
+            <div className="photos">
+              <img src="/src/images/service-slider-3.jpg" alt="" />
+            </div>
+          </Slider>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default AboutSlider;
+export default SliderServices;

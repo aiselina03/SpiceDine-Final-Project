@@ -22,6 +22,7 @@ export const getProduct = async (req, res) => {
 export const createProduct = async (req, res) => {
     try {
         const { name, price, ingredient, categoryId, description } = req.body;
+
         console.log(req.body);
         const newProducts = new MenuModel({ name, image: "http://localhost:3000/image/" + req.uploadFileName, price, ingredient, categoryId, description });
         await newProducts.save();
