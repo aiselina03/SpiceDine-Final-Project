@@ -929,8 +929,110 @@ body {
       input {
         color: var(--main-field-text-color);
       }
-    
     }
+  }
+  .servicesPage {
+    .servicesP {
+      .service {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+      }
+    }
+    .roomServices {
+      .rooms {
+        .room1 {
+          .diningRoom {
+            background-color: var(--main-some-bg-color);
 
+            .text {
+              color: var(--main-p-color);
+            }
+            .head {
+              h2 {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+        .room2 {
+          .cornerRoom {
+            background-color: var(--main-some-bg-color);
+
+            .text {
+              color: var(--main-p-color);
+            }
+            .head {
+              h2 {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .privateBookingSection {
+      .privateBookingTable {
+        background-color: var(--main-some-bg-color);
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .service {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .form {
+            .row1 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .field {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+            .row2 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .fields {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+            .textarea {
+              .label {
+                color: var(--main-book-color);
+              }
+              .form-control {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .feedBack {
+      .comments {
+        background-color: var(--main-some-bg-color);
+        .feed {
+          p {
+            color: var(--main-book-color);
+          }
+        }
+      }
+    }
   }
 }
