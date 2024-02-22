@@ -8,13 +8,8 @@ import Cursor from "../../components/Cursor";
 import { BasketContext } from "../../context/basketContext";
 
 function Basket() {
-  const {
-    basket,
-    removeBasket,
-    decreaseCount,
-    increaseCount,
-    getTotal,
-  } = useContext(BasketContext);
+  const { basket, removeBasket, decreaseCount, increaseCount, getTotal } =
+    useContext(BasketContext);
   return (
     <>
       <Helmet>
@@ -56,8 +51,8 @@ function Basket() {
                       ></i>
                     </td>
                     <td>
-                      <Link to={"/shopDetail/"+x._id}>
-                      <img src={x.image} alt="" />
+                      <Link to={"/shopDetail/" + x._id}>
+                        <img src={x.image} alt="" />
                       </Link>
                     </td>
                     <td>
@@ -105,7 +100,9 @@ function Basket() {
                 <p>${getTotal()}</p>
               </div>
               <div>
-                <button>PROCEED TO CHECKOUT</button>
+                <Link to={"/checkout"}>
+                  <button>PROCEED TO CHECKOUT</button>
+                </Link>
               </div>
             </div>
           </div>

@@ -5,12 +5,20 @@ import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import "./style.scss";
 import { Link, NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 function Account() {
   const { logOut } = useContext(UserContext);
 
   return (
     <>
+     <Helmet>
+    <title>SpiceDine - Account</title>
+    <link
+      rel="icon"
+      href="https://png.pngitem.com/pimgs/s/530-5308172_restaurant-gastronomique-icone-hd-png-download.png"
+    />
+  </Helmet>
       <div className="account">
         <p>
           <Link to={"/"}>

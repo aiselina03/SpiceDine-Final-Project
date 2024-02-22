@@ -1056,4 +1056,56 @@ body {
       }
     }
   }
+  .checkoutPage {
+    .checkout {
+      .billing {
+        h2 {
+          color: var(  --main-book-color);
+        }
+        .formik {
+          .form {
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .field {
+                background-color: var(--main-search-bg-color);
+               
+              }
+            }
+            .textareas {
+              .label {
+                color: var(--main-p-color);
+              }
+              .textarea {
+                background-color: var(--main-search-bg-color);
+        
+              }
+            }
+          }
+        }
+      }
+      .order {
+        h2 {
+          color: var(  --main-book-color);
+        }
+        .productOrder {
+          .subTotal {
+            table {
+              background-color: var(--main-search-bg-color);
+              tr {
+                th {
+                  color: #c7a97f;
+                }
+                td {
+                  color: var( --main-basket-p-color);
+                }
+              }
+            }
+          }
+        }
+     
+      }
+    }
+  }
 }
