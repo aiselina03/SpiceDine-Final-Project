@@ -4,6 +4,8 @@ import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import { Helmet } from "react-helmet-async";
+import Faqs from "../../components/Faq";
+import AskQuestions from "../../components/AskQuestions";
 
 function Faq() {
   return (
@@ -26,6 +28,8 @@ function Faq() {
             </p>
           </div>
         </div>
+        <Faqs/>
+        <AskQuestions/>
       </div>
       <Mode />
       <Scroll />

@@ -1035,4 +1035,25 @@ body {
       }
     }
   }
+  .faqsPage {
+    .faqs {
+      .faqs_content {
+        .faq_card {
+          .question {
+            background-color: var(--main-search-bg-color);
+            p {
+              color: var(--main-text-color);
+              &:hover {
+                color: var(--main-p-color);
+              }
+            }
+          }
+          .answer {
+            color: var(--main-p-color);
+            background-color: var(--main-search-bg-color);
+          }
+        }
+      }
+    }
+  }
 }

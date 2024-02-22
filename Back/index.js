@@ -6,6 +6,7 @@ import { userRouter } from "./src/Router/UserRouter.js";
 import { authRouter } from "./src/Router/AuthRouter.js";
 import { menuRouter } from "./src/Router/MenuRouter.js";
 import { MenuModel } from "./src/Model/MenuModel.js";
+import { FaqRouter } from "./src/Router/FaqRouter.js";
 
 const app = express();
 app.use(express.json());
@@ -14,6 +15,7 @@ app.use(cors());
 app.use("/image", express.static('./public/image'))
 app.use("/api/users", userRouter)
 app.use("/api/menu", menuRouter)
+app.use('/api/faq' , FaqRouter)
 app.use("/", authRouter)
 
 
