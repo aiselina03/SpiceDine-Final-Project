@@ -64,9 +64,10 @@ function Checkout() {
                     .required("Required"),
                   notes: Yup.string().required("Required"),
                 })}
-                onSubmit={(values, { setSubmitting }) => {
+                onSubmit={(values, { setSubmitting, resetForm}) => {
                   setTimeout(() => {
                     setSubmitting(false);
+                    resetForm()
                   }, 400);
                 }}
               >

@@ -27,11 +27,11 @@ function PrivateBooking() {
             event: "",
           }}
           validationSchema={Yup.object({
-            name: Yup.string(),
-            phone: Yup.number(),
-            date: Yup.string(),
-            time: Yup.string(),
-            event: Yup.string(),
+            name: Yup.string().required("Required"),
+            phone: Yup.number().required("Required"),
+            date: Yup.string().required("Required"),
+            time: Yup.string().required("Required"),
+            event: Yup.string().required("Required"),
           })}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
@@ -52,7 +52,7 @@ function PrivateBooking() {
                   className="field"
                   placeholder="Name"
                 />
-                <ErrorMessage name="name" />
+                <ErrorMessage name="name" component={"span"} />
               </div>
               <div className="input">
                 <label htmlFor="phone" className="label">
@@ -64,7 +64,7 @@ function PrivateBooking() {
                   className="field"
                   placeholder="Phone"
                 />
-                <ErrorMessage name="phone" />
+                <ErrorMessage name="phone" component={"span"}/>
               </div>
             </div>
             <div className="row2">
@@ -77,7 +77,7 @@ function PrivateBooking() {
                   <option value="1">Birthday</option>
                   <option value="2">Party</option>
                 </Field>
-                <ErrorMessage name="event" />
+                <ErrorMessage name="event" component={"span"}/>
               </div>
               <div className="input">
                 <label htmlFor="event" className="label">
@@ -88,28 +88,28 @@ function PrivateBooking() {
                   <option value="1">5 Person</option>
                   <option value="2">10 Person</option>
                 </Field>
-                <ErrorMessage name="event" />
+                <ErrorMessage name="event" component={"span"}/>
               </div>
               <div className="input">
                 <label htmlFor="date" className="label">
                 Date
                 </label>
                 <Field name="date" type="date" className="fields" />
-                <ErrorMessage name="date" />
+                <ErrorMessage name="date" component={"span"}/>
               </div>
               <div className="input">
                 <label htmlFor="time" className="label">
                   Start from
                 </label>
                 <Field name="time" type="time" className="fields" />
-                <ErrorMessage name="time" />
+                <ErrorMessage name="time" component={"span"}/>
               </div>
               <div className="input">
                 <label htmlFor="time" className="label">
                   Finish by
                 </label>
                 <Field name="time" type="time" className="fields" />
-                <ErrorMessage name="time" />
+                <ErrorMessage name="time" component={"span"}/>
               </div>
             </div>
             <div className="textarea">

@@ -29,12 +29,12 @@ function BookingTable() {
                 service: "",
               }}
               validationSchema={Yup.object({
-                name: Yup.string(),
-                phone: Yup.number(),
-                date: Yup.string(),
-                time: Yup.string(),
-                category: Yup.string(),
-                service: Yup.string(),
+                name: Yup.string().required("Required"),
+                phone: Yup.number().required("Required"),
+                date: Yup.string().required("Required"),
+                time: Yup.string().required("Required"),
+                category: Yup.string().required("Required"),
+                service: Yup.string().required("Required"),
               })}
               onSubmit={(values, { setSubmitting, resetForm }) => {
                 setTimeout(() => {
@@ -55,7 +55,7 @@ function BookingTable() {
                       className="field"
                       placeholder="Name"
                     />
-                    <ErrorMessage name="name" />
+                    <ErrorMessage name="name" component={"span"} />
                   </div>
 
                   <div className="input">
@@ -68,7 +68,7 @@ function BookingTable() {
                       className="field"
                       placeholder="Phone"
                     />
-                    <ErrorMessage name="phone" />
+                    <ErrorMessage name="phone" component={"span"} />
                   </div>
                 </div>
                 <div className="row2">
@@ -82,7 +82,7 @@ function BookingTable() {
                       <option value="2">Bistro</option>
                       <option value="3">Steakhouse</option>
                     </Field>
-                    <ErrorMessage name="category" />
+                    <ErrorMessage name="category" component={"span"}/>
                   </div>
                   <div className="input">
                     <label htmlFor="service" className="label">
@@ -92,28 +92,28 @@ function BookingTable() {
                       <option value="0">Select service</option>
                       <option value="1">Dining-In</option>
                     </Field>
-                    <ErrorMessage name="service" />
+                    <ErrorMessage name="service" component={"span"}/>
                   </div>
                   <div className="input">
                     <label htmlFor="date" className="label">
                       I'm available on or after
                     </label>
                     <Field name="date" type="date" className="fields" />
-                    <ErrorMessage name="date" />
+                    <ErrorMessage name="date" component={"span"}/>
                   </div>
                   <div className="input">
                     <label htmlFor="time" className="label">
                       Start from
                     </label>
                     <Field name="time" type="time" className="fields" />
-                    <ErrorMessage name="time" />
+                    <ErrorMessage name="time" component={"span"}/>
                   </div>
                   <div className="input">
                     <label htmlFor="time" className="label">
                       Finish by
                     </label>
                     <Field name="time" type="time" className="fields" />
-                    <ErrorMessage name="time" />
+                    <ErrorMessage name="time" component={"span"}/>
                   </div>
                 </div>
                 <div className="btn">

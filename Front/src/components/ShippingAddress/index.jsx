@@ -74,9 +74,10 @@ function ShippingAddress() {
                       .email("Invalid email address")
                       .required("Required"),
                   })}
-                  onSubmit={(values, { setSubmitting }) => {
+                  onSubmit={(values, { setSubmitting, resetForm }) => {
                     setTimeout(() => {
                       setSubmitting(false);
+                      resetForm()
                     }, 400);
                   }}
                 >

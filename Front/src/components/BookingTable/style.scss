@@ -9,7 +9,7 @@
     width: 90%;
     max-width: 100%;
     margin: 80px auto;
-    height: 90vh;
+    min-height: 90vh;
     background-color: #16272d;
     padding: 40px;
     .header {
@@ -56,6 +56,10 @@
             justify-content: center;
             gap: 15px;
             flex-direction: column;
+            span {
+              font-family: "Roboto", serif;
+              color: red;
+            }
             .label {
               line-height: 25px;
               color: #cdc5b9;
@@ -87,7 +91,10 @@
             justify-content: center;
             gap: 15px;
             flex-direction: column;
-
+            span {
+              font-family: "Roboto", serif;
+              color: red;
+            }
             .label {
               line-height: 25px;
               color: #cdc5b9;

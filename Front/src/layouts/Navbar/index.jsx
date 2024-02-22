@@ -242,7 +242,7 @@ function Navbar() {
                   <NavLink to={"/adminPanel"}>Admin Panel</NavLink>
               
               ) : null}
-                  <NavLink to={"*"}>Page 404</NavLink>
+                  {/* <NavLink to={"*"}>Page 404</NavLink> */}
                 </div>
               </li>
               <li>
