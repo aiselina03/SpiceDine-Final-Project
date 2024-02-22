@@ -21,7 +21,7 @@ function Addresses() {
       </div>
       <div className="accountPages">
         <div className="accountPage">
-        <div className="nav">
+          <div className="nav">
             <NavLink to={"/account"}>
               <h2>Dashboard</h2>
             </NavLink>
@@ -39,7 +39,31 @@ function Addresses() {
             </NavLink>
           </div>
           <div className="addresses">
-  
+            <p className="head">
+              The following addresses will be used on the checkout page by
+              default.
+            </p>
+            <div className="addressData">
+               <div className="address1">
+              <div className="billing">
+                <h2>Billing address</h2>
+                <Link to={"/billing"}>
+                  <button>Add</button>
+                </Link>
+              </div>
+              <p>You have not set up this type of address yet.</p>
+            </div>
+            <div className="address2">
+              <div className="shipping">
+                <h2>Shipping address</h2>
+                <Link to={"/shipping"}>
+                  <button>Add</button>
+                </Link>
+              </div>
+              <p>You have not set up this type of address yet.</p>
+            </div>
+            </div>
+           
           </div>
         </div>
       </div>

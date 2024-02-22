@@ -28,6 +28,8 @@ import Order from "./pages/Orders";
 import AccountDetails from "./pages/AccountDetails";
 import Addresses from "./pages/Adresses";
 import Checkout from "./pages/Checkout";
+import BillingAddress from "./components/BillingAddress";
+import ShippingAddress from "./components/ShippingAddress";
 
 
 
@@ -55,6 +57,8 @@ function App() {
           <Route path="/order" element={<Order/>} />
           <Route path="/accountDetails" element={<AccountDetails/>} />
           <Route path="/adresses" element={<Addresses/>} />
+          <Route path="/billing" element={<BillingAddress/>} />
+          <Route path="/shipping" element={<ShippingAddress/>} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/resetPassword" element={<ResetPassword />} />

@@ -1060,7 +1060,7 @@ body {
     .checkout {
       .billing {
         h2 {
-          color: var(  --main-book-color);
+          color: var(--main-book-color);
         }
         .formik {
           .form {
@@ -1070,7 +1070,6 @@ body {
               }
               .field {
                 background-color: var(--main-search-bg-color);
-               
               }
             }
             .textareas {
@@ -1079,7 +1078,6 @@ body {
               }
               .textarea {
                 background-color: var(--main-search-bg-color);
-        
               }
             }
           }
@@ -1087,7 +1085,7 @@ body {
       }
       .order {
         h2 {
-          color: var(  --main-book-color);
+          color: var(--main-book-color);
         }
         .productOrder {
           .subTotal {
@@ -1098,13 +1096,149 @@ body {
                   color: #c7a97f;
                 }
                 td {
-                  color: var( --main-basket-p-color);
+                  color: var(--main-basket-p-color);
                 }
               }
             }
           }
         }
-     
+      }
+    }
+  }
+  .accountPages {
+    .accountPage {
+      .nav {
+        border-right: 1px solid var(--main-search-basket-table-color);
+        a {
+          color: var(--main-basket-p-color);
+        }
+      }
+      .dashboard {
+        p {
+          color: var(--main-privacy-p-color);
+          a {
+            color: var(--main-text-color);
+          }
+        }
+      }
+      .accountDetails {
+        .form {
+          .row1 {
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .field {
+                background-color: var(--main-search-bg-color);
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .field {
+                background-color: var(--main-search-bg-color);
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .passwordChange {
+            h2 {
+              color: var(--main-p-color);
+            }
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .fields {
+                background-color: var(--main-search-bg-color);
+                .fieldP {
+                  color: var(--main-field-text-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      .addresses {
+        .head {
+          color: var(--main-privacy-p-color);
+        }
+        .addressData {
+          .address1 {
+            .billing {
+              border-bottom: 1px solid var(--main-search-basket-table-color);
+            }
+            p {
+              color: var(--main-privacy-p-color);
+            }
+          }
+          .address2 {
+            .shipping {
+              border-bottom: 1px solid var(--main-search-basket-table-color);
+            }
+            p {
+              color: var(--main-privacy-p-color);
+            }
+          }
+        }
+      }
+      .billingAddress {
+        .billing {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .formik {
+            .form {
+              .input {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .field {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+              .textareas {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .textarea {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .formik {
+            .form {
+              .input {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .field {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+              .textareas {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .textarea {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

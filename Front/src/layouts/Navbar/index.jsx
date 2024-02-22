@@ -70,6 +70,11 @@ function Navbar() {
             ? "navbarBcgColor"
             : ""|| location.pathname === "/checkout"
             ? "navbarBcgColor"
+            : "" || location.pathname === "/billing"
+            ? "navbarBcgColor"
+            : ""
+            || location.pathname === "/shipping"
+            ? "navbarBcgColor"
             : ""
         }`}
       >
