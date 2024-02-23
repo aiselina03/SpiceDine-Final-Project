@@ -7,12 +7,10 @@ import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import { BasketContext } from "../../context/basketContext";
 import { WishlistContext } from "../../context/wishlistContext";
-// import { UserContext } from "../../context/userContext";
 
 function Wishlist() {
   const { addBasket } = useContext(BasketContext);
   const { wishlist, addRemoveWishlist } = useContext(WishlistContext);
-  // const {  decode } = useContext(UserContext);
   return (
     <>
       <Helmet>
@@ -30,9 +28,7 @@ function Wishlist() {
           Wishlist
         </p>
       </div>
-      {/* {decode ? ( */}
-            <> 
-           <div className="wishlistPage">
+      <div className="wishlistPage">
         <div className="wishlist">
           <div className="table">
             <table>
@@ -51,13 +47,13 @@ function Wishlist() {
                   <tr key={x._id}>
                     <td>
                       <i
-                        class="fa-sharp fa-regular fa-xmark"
+                        className="fa-sharp fa-regular fa-xmark"
                         onClick={() => addRemoveWishlist(x)}
                       ></i>
                     </td>
                     <td>
-                    <Link to={"/shopDetail/"+x._id}>
-                      <img src={x.image} alt="" />
+                      <Link to={"/shopDetail/" + x._id}>
+                        <img src={x.image} alt="" />
                       </Link>
                     </td>
                     <td>
@@ -78,9 +74,6 @@ function Wishlist() {
           </div>
         </div>
       </div>
-            </>
-        {/* ) : (<Navigate to={"/login"}></Navigate>)} */}
-    
       <Mode />
       <Scroll />
       <Cursor />

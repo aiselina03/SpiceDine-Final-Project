@@ -1,15 +1,17 @@
 import React, { useContext } from "react";
 import "./style.scss";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import { BasketContext } from "../../context/basketContext";
 
+
 function Basket() {
   const { basket, removeBasket, decreaseCount, increaseCount, getTotal } =
     useContext(BasketContext);
+
   return (
     <>
       <Helmet>

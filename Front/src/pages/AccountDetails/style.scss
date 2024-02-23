@@ -30,7 +30,6 @@
       width: 80%;
       font-family: "Roboto", serif;
       margin-left: 50px;
-
       .form {
         display: flex;
         align-items: center;
@@ -163,6 +162,292 @@
           transition: all 600ms;
           &:hover {
             background-color: #dcd7e3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 10px !important;
+        }
+      }
+      .accountDetails {
+        width: 100%;
+        margin-left: 0px;
+        .form {
+          .row1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            .input {
+              .field {
+                width: 280px !important;
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .field {
+                width: 280px !important;
+              }
+            }
+          }
+          .passwordChange {
+            width: 280px !important;
+            .fields {
+              width: 225px !important;
+              .fieldP {
+                width: 230px !important;
+              }
+            }
+          }
+        }
+        button {
+          width: 280px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 10px !important;
+        }
+      }
+      .accountDetails {
+        width: 100%;
+        margin-left: 0px;
+        .form {
+          .row1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            .input {
+              .field {
+                width: 460px !important;
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .field {
+                width: 460px !important;
+              }
+            }
+          }
+          .passwordChange {
+            width: 460px !important;
+            .fields {
+              width: 400px !important;
+              .fieldP {
+                width: 430px !important;
+              }
+            }
+          }
+        }
+        button {
+          width: 460px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 10px !important;
+        }
+      }
+      .accountDetails {
+        width: 100%;
+        margin-left: 0px;
+        .form {
+          .row1 {
+            display: flex;
+
+            gap: 30px;
+            .input {
+              .field {
+                width: 350px !important;
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .field {
+                width: 740px !important;
+              }
+            }
+          }
+          .passwordChange {
+            width: 740px !important;
+            .fields {
+              width: 680px !important;
+              .fieldP {
+                width: 740px !important;
+              }
+            }
+          }
+        }
+        button {
+          width: 740px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1150px) {
+  .accountPages {
+    .accountPage {
+      min-height: auto;
+      .nav {
+        width: 20%;
+
+        h2 {
+          margin-right: 30px !important;
+          margin: 20px 0;
+          line-height: 30px !important;
+        }
+      }
+      .accountDetails {
+        width: 80%;
+        .form {
+          .row1 {
+            gap: 40px;
+            .input {
+              .field {
+                width: 280px;
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .field {
+                width: 600px;
+              }
+            }
+          }
+          .passwordChange {
+            width: 600px;
+
+            .input {
+              .fields {
+                width: 550px;
+
+                .fieldP {
+                  width: 600px;
+                }
+              }
+            }
+          }
+          button {
+            width: 600px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1150px) and (max-width: 1280px) {
+  .accountPages {
+    .accountPage {
+      min-height: auto;
+      .nav {
+        width: 20%;
+
+        h2 {
+          margin-right: 30px !important;
+          margin: 20px 0;
+          line-height: 30px !important;
+        }
+      }
+      .accountDetails {
+        width: 80%;
+        .form {
+          .row1 {
+            gap: 40px;
+            .input {
+              .field {
+                width: 330px;
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .field {
+                width: 700px;
+              }
+            }
+          }
+          .passwordChange {
+            width: 700px;
+
+            .input {
+              .fields {
+                width: 650px;
+
+                .fieldP {
+                  width: 700px;
+                }
+              }
+            }
+          }
+          button {
+            width: 700px;
           }
         }
       }

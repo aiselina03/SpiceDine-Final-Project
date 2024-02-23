@@ -34,7 +34,6 @@ function Home() {
         <div className="loaderCenter">
           <div className="loader">
             <img src="/src/images/loader.gif" alt="" />
-            {/* <img src="/src/images/loadingimage.webp" alt="" /> */}
           </div>
         </div>
       ) : (

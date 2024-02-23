@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { UserContext } from "../../context/userContext";
+
 import Scroll from "../../components/Scroll";
 import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import "./style.scss";
-
-//role deyismir input ici dolu gelmir formdata deyil
+import { UserContext } from "../../context/userContext";
 
 function UserEditPanel() {
   let { id } = useParams();
@@ -21,45 +20,43 @@ function UserEditPanel() {
     } else {
       getUserById(id);
     }
-  }, [decode, id]);
+  }, [id]);
 
-  async function getUserById(id) {
-    try {
-      const response = await fetch(`http://localhost:3000/api/users/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+  async function getUserById(_id) {
+    const response = await fetch(`http://localhost:3000/api/users/${_id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch product data");
-      }
-      const userData = await response.json();
-      setUsername(userData.username);
-      setEmail(userData.email);
-      setRole(userData.role);
-    } catch (error) {
-      console.error("Error occurred while fetching user:", error);
+    if (!response.ok) {
+      console.log("update olundu");
     }
+    const userData = await response.json();
+    setUsername(userData.username);
+    setEmail(userData.email);
+    setRole(userData.role);
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    try {
-      const response = await fetch(`http://localhost:3000/api/users/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ username, email, role }),
-      });
-      if (response.ok) {
-        window.location.href = "/userPanel";
+    if (decode && decode.role === "admin") {
+      try {
+        const response = await fetch(`http://localhost:3000/api/users/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ username, email, role }),
+        });
+        if (response.ok) {
+          window.location.href = "/userPanel";
+        }
+        console.log("Product updated successfully");
+      } catch (error) {
+        console.error("Error occurred while updating user:", error);
       }
-      console.log("Product updated successfully");
-    } catch (error) {
-      console.error("Error occurred while updating user:", error);
     }
   }
 
@@ -96,7 +93,7 @@ function UserEditPanel() {
             placeholder="role"
           />
 
-          <button>Update User</button>
+          <button type="submit">Update User</button>
         </form>
       </div>
       <Mode />

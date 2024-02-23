@@ -1240,6 +1240,15 @@ body {
           }
         }
       }
+      .order {
+        .noOrder {
+          background-color: var(  --main-some-bg-color);
+          p {
+            color: var(--main-basket-p-color);
+        
+          }
+        }
+      }
     }
   }
 }

@@ -133,7 +133,6 @@ function ShopDetail() {
       </div>
       <BestSeller />
       </div>
- 
       <Mode />
       <Scroll />
       <Cursor />

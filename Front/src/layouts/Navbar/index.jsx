@@ -96,12 +96,6 @@ function Navbar() {
                 Spicedine@templatetrip.com
               </a>
             </div>
-            {/* <div className="language">
-              <select name="" id="">
-                <option value="">English</option>
-                <option value="">Azerbaijan</option>
-              </select>
-            </div> */}
           </div>
         </div>
         <div className="mainNavbar">
@@ -146,7 +140,6 @@ function Navbar() {
             </ul>
           </div>
           <div className="icons">
-            {/* <i className="fa-light fa-magnifying-glass"></i> */}
             <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
             </NavLink>
@@ -204,7 +197,6 @@ function Navbar() {
             </NavLink>
           </div>
           <div className="icons">
-            {/* <i className="fa-light fa-magnifying-glass"></i> */}
             <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
             </NavLink>
@@ -257,7 +249,6 @@ function Navbar() {
               <li>
                 <NavLink to={"/contact"}>CONTACT</NavLink>
               </li>
-             
             </ul>
           </div>
       </div>

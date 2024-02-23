@@ -35,7 +35,7 @@ function PrivacyPolicy() {
             Suggested text: If you upload images to the website, you should
             avoid uploading images with embedded location data (EXIF GPS)
             included. Visitors to the website can download and extract any
-            location data from images on the website.{" "}
+            location data from images on the website.
           </p>
           <h2>Cookies</h2>
           <p>

@@ -7,7 +7,7 @@ export const register = async (req, res) => {
         const {username, email, password } = req.body;
         const hash = bcrypt.hashSync( password, 12);
         const newuser = new UserModel({username, email, password:hash })
-        var token = jwt.sign({username: newuser.username, email: newuser.email, role: newuser.role}, process.env.JWT_SECRET_KEY ,{ expiresIn: '1h' });
+        var token = jwt.sign({username: newuser.username, email: newuser.email, role: newuser.role}, process.env.JWT_SECRET_KEY ,{ expiresIn: '24h' });
         await newuser.save();
         res.json(token);
       } catch (error) {
@@ -29,7 +29,7 @@ export const login =  async (req, res) => {
             return
         }
 
-        const token = jwt.sign({email: user.email, role: user.role}, process.env.JWT_SECRET_KEY ,{ expiresIn: '1h' });
+        const token = jwt.sign({email: user.email, role: user.role}, process.env.JWT_SECRET_KEY ,{ expiresIn: '24h' });
         res.json(token);
 
       } catch (error) {

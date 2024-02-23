@@ -63,7 +63,6 @@ function Addresses() {
               <p>You have not set up this type of address yet.</p>
             </div>
             </div>
-           
           </div>
         </div>
       </div>

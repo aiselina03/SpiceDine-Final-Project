@@ -22,8 +22,8 @@ function Contact() {
           <div className="headers">
             <h2>CONTACT US</h2>
             <p>
-              If you have any questions or concerns, you can contact us in
-              the following ways
+              If you have any questions or concerns, you can contact us in the
+              following ways
             </p>
           </div>
         </div>
@@ -58,9 +58,11 @@ function Contact() {
         <div className="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d68400.13510028234!2d-74.14935246335048!3d40.74250179664903!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25153abefda67%3A0x8971e805835b3a5b!2sFlyNYON%20Helicopter%20Tours!5e0!3m2!1sru!2sus!4v1701599686881!5m2!1sru!2sus"
-            allowfullscreen=""
+            allowFullScreen
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
+            async
+            defer
           ></iframe>
         </div>
         <ContactMessage />

@@ -58,3 +58,16 @@
     }
   }
 }
+
+
+.loaderCenterFaq {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fa-spin {
+    font-size: 55px;
+    color: #c7a97f;
+  }
+}

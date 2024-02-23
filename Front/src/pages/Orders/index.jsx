@@ -21,7 +21,7 @@ function Order() {
       </div>
       <div className="accountPages">
         <div className="accountPage">
-        <div className="nav">
+          <div className="nav">
             <NavLink to={"/account"}>
               <h2>Dashboard</h2>
             </NavLink>
@@ -39,7 +39,14 @@ function Order() {
             </NavLink>
           </div>
           <div className="order">
-          
+            <div className="noOrder">
+              <p>
+                No order has been made yet.
+                <Link to={"/shop"}>
+                  <h4>Browse products</h4>
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
